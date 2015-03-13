@@ -1,0 +1,43 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+*/
+
+/* File Field Widget */
+filefield {
+  -moz-appearance: none;
+  margin: 2px 4px;
+}
+
+.fileFieldContentBox {
+  -moz-padding-start: 4px;
+  background-color: white;
+  color: #444;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.fileFieldContentBox[disabled="true"] {
+  background-color: #EBEBE4;
+  color: #999;
+}
+
+.fileFieldIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  -moz-margin-start: 1px;
+  -moz-margin-end: 4px;
+}
+
+.fileFieldLabel {
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  color: #545454;
+}

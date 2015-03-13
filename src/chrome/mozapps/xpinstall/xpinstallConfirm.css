@@ -1,0 +1,94 @@
+#xpinstallheader {
+  margin-bottom: 2em;
+}
+
+#itemList {
+  -moz-appearance: none;
+  margin: 0px 3px;
+  height: 8.1em;
+  background-color: white;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.dialog-button-box {
+  margin-top: 15px;
+}
+
+#itemWarningIntro {
+  -moz-margin-start: 8px;
+}
+
+#dialogContentBox {
+  padding: 5px;
+}
+
+installitem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  -moz-padding-start: 5px;
+  -moz-padding-end: 0;
+  margin-bottom: 5px;
+}
+
+.alert-icon {
+  list-style-image: url("chrome://global/skin/icons/allowed_plugins2.png");
+  width: 38px;
+  height: 38px;
+  -moz-margin-start: 2px;
+  -moz-margin-end: 6px;
+}
+
+.warning {
+  font-weight: bold;
+}
+
+.xpinstallIconContainer {
+  width: 32px;
+  height: 32px;
+  -moz-margin-end: 5px;
+}
+
+.xpinstallItemName {
+  font-weight: bold;
+}
+
+.xpinstallItemSigned {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.xpinstallItemURL {
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  -moz-margin-start: 6px;
+  -moz-margin-end: 5px;
+}
+
+.xpinstallItemIcon {
+  max-width: 32px;
+  max-height: 32px;
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
+}
+
+installitem[type="theme"] .xpinstallItemIcon {
+  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
+}
+
+installitem[type="locale"] .xpinstallItemIcon {
+  list-style-image: url("chrome://mozapps/skin/extensions/localeGeneric.png");
+}
+
+installitem[type="plugin"] .xpinstallItemIcon {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+}
+
+installitem[type="dictionary"] .xpinstallItemIcon {
+  list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
+}

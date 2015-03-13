@@ -1,0 +1,289 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== menulist.css ===================================================
+  == Styles used by the XUL menulist element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* :::::::::: menulist :::::::::: */
+
+menulist {
+  -moz-appearance: none;
+  background-color: #F9F9F9;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 0 1px #FEFEFE;
+  color: rgb(34, 34, 34);
+  font: inherit;
+  margin: 2px 4px 3px 4px;
+  min-width: 5em;
+  min-height: 24px;
+}
+
+menulist:not([disabled="true"]):not([open="true"]):not([checked="true"]):hover {
+  background-color: #FCFCFC;
+  color: #222;
+}
+
+menulist:not([disabled="true"]):hover:active {
+  background-color: #E6E6E6;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 1px 0 #DADADA;
+  color: #333;
+}
+
+menulist[open="true"],
+menulist[checked="true"] {
+  border-color: #4080fa;
+  color: #333;
+}
+
+.menulist-label-box {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  padding: 1px 2px;
+}
+
+.menulist-icon[src] {
+  margin: 0px 2px 0px 2px;
+}
+
+.menulist-description {
+  font-style: italic;
+  color: GrayText;
+  -moz-margin-start: 1ex !important;
+}
+
+/* ..... dropmarker ..... */
+
+.menulist-dropmarker {
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  list-style-image: url("chrome://global/skin/icons/select.png");
+  -moz-image-region: rect(0, 19px, 8px, 0);
+}
+
+/* ..... focused state ..... */
+
+menulist:-moz-focusring:not([open="true"]) {
+  transition: border-color 200ms;
+  border-color: rgb(77, 144, 254);
+  outline: none;
+}
+
+/* ..... disabled state ..... */
+
+menulist[disabled="true"] {
+  background-color: rgb(250, 250, 250);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgb(150, 150, 150);
+}
+
+menulist[disabled="true"] .menulist-dropmarker {
+  opacity: .5;
+}
+
+/* ::::: editable menulists ::::: */
+
+.menulist-editable-box {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0px;
+}
+
+html|*.menulist-editable-input {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  background: inherit;
+  font: inherit;
+}
+
+/* ::::: compact menulists ::::: */
+
+.menulist-compact {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: ThreeDFace;
+  color: ButtonText;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+}
+
+.menulist-compact > .menulist-label-box > .menulist-label {
+  margin: 0 3px !important;
+  text-align: end;
+}  
+
+.menulist-compact > .menulist-label-box > .menulist-icon {
+  -moz-margin-start: 2px;
+}
+
+.menulist-compact[open="true"] {
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
+}
+
+.menulist-compact[disabled="true"] {
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+@media (-moz-windows-default-theme) {
+  .menulist-label-box {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+}
+
+@media (-moz-windows-default-theme) {
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+    height: 1.8em;
+    color: -moz-FieldText;
+    -moz-margin-start: 1px;
+    -moz-margin-end: 1px;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-outline-radius: 3px;
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+    -moz-border-top-colors: rgb(217,217,217) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(217,217,217) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(217,217,217) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(217,217,217) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(190,190,190,.1), rgba(190,190,190,.4));
+    background-color: transparent;
+    outline: 1px solid rgba(255,255,255,.4);
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+    border-style: solid;
+    -moz-border-top-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(125,162,206) rgba(255,255,255,.6);
+    outline: 1px solid rgba(255,255,255,.4);
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus),
+  treechildren::-moz-tree-row(dropOn) {
+    -moz-border-top-colors: rgb(132,172,221) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(132,172,221) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(132,172,221) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(132,172,221) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(131,183,249,.16), rgba(131,183,249,.375));
+    background-color: transparent;
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
+    border-style: solid;
+    -moz-border-top-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(125,162,206) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(131,183,249,.28), rgba(131,183,249,.5));
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+    -moz-border-top-colors: rgb(184,214,251) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(184,214,251) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(184,214,251) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(184,214,251) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(131,183,249,.05), rgba(131,183,249,.16));
+    outline: 1px solid rgba(255,255,255,.4);
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+    -moz-border-top-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(125,162,206) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(131,183,249,.05), rgba(131,183,249,.16));
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+    -moz-border-top-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-right-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-left-colors: rgb(125,162,206) rgba(255,255,255,.4);
+    -moz-border-bottom-colors: rgb(125,162,206) rgba(255,255,255,.6);
+    background-image: linear-gradient(rgba(131,183,249,.28), rgba(131,183,249,.5));
+  }
+
+  tree[disabled="true"] > treechildren::-moz-tree-row {
+    background: none;
+    -moz-border-top-colors: transparent;
+    -moz-border-right-colors: transparent;
+    -moz-border-left-colors: transparent;
+    -moz-border-bottom-colors: transparent;
+  }
+
+  treechildren::-moz-tree-cell(dropOn) {
+    background-image: none;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text {
+    padding-bottom: initial;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+    color: -moz-DialogText;
+  }
+
+  @media (-moz-os-version: windows-win8) {
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+      border-width: 1px;
+      border-radius: 0;
+      -moz-outline-radius: 0;
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+      background-image: linear-gradient(rgba(190,190,190,.4), rgba(190,190,190,.4));
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus),
+    treechildren::-moz-tree-row(dropOn) {
+      background-image: linear-gradient(rgba(131,183,249,.375), rgba(131,183,249,.375));
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
+      background-image: linear-gradient(rgba(131,183,249,.5), rgba(131,183,249,.5));
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+      background-image: linear-gradient(rgba(131,183,249,.16), rgba(131,183,249,.16));
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+      background-image: linear-gradient(rgba(131,183,249,.16), rgba(131,183,249,.16));
+    }
+
+    treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+      background-image: linear-gradient(rgba(131,183,249,.5), rgba(131,183,249,.5));
+    }
+  }
+}

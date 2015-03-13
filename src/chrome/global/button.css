@@ -1,0 +1,121 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== button.css =====================================================
+  == Styles used by the XUL button element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* :::::::::: button :::::::::: */
+
+button {
+  -moz-appearance: none;
+  background-color: #F9F9F9;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 0 1px #FEFEFE;
+  color: rgb(34, 34, 34);
+  font: inherit;
+  margin: 2px 2px 3px 2px;
+  min-width: 4em;
+  min-height: 24px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 8px;
+}
+
+button:not([disabled="true"]):hover {
+  background-color: #FCFCFC;
+  color: #222;
+}
+
+button:not([disabled="true"]):hover:active,
+button:not([disabled="true"])[open="true"],
+button:not([disabled="true"])[checked="true"] {
+  background-color: #E6E6E6;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 1px 0 #DADADA;
+  color: #333;
+}
+
+.button-box {
+  padding: 2px 6px 3px 6px;
+}
+
+.button-text {
+  -moz-appearance: none;
+  margin: 0 !important;
+  text-align: center;
+}
+
+/* .......... focused state .......... */
+
+button:-moz-focusring {
+  border-color: rgb(77, 144, 254);
+  outline: none;
+}
+
+/* .......... disabled state .......... */
+
+button[disabled="true"] {
+  background-color: rgb(250, 250, 250);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgb(150, 150, 150);
+}
+
+/* ::::: menu/menu-button buttons ::::: */
+
+button[type="menu-button"] {
+  margin: 0;
+  border: none;
+}
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  -moz-appearance: none !important;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  border: none;
+  list-style-image: url("chrome://global/skin/icons/select.png");
+  -moz-image-region: rect(0, 19px, 8px, 0);
+}
+
+.button-menu-dropmarker {
+  -moz-margin-end: -10px;
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+button[type="disclosure"] {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  -moz-appearance: none;
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+  min-width: 0px !important;
+  background-color: transparent;
+}
+
+button[type="disclosure"][open="true"] {
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png");
+}
+
+.dialog-button-box .dialog-button,
+.dialog-button-box botton,
+#dialogButtons button,
+.prefWindow-dlgbuttons button {
+  margin: 2px 5px 3px 6px;
+}
+
+#requests-menu-toolbar button {
+  box-shadow: none;
+  text-shadow: none;
+}

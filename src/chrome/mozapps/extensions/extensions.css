@@ -1,0 +1,1171 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/inContentUI.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+#header {
+  background-image: linear-gradient(#FAFAFA, rgba(240, 240, 240, 0.92)) !important;
+  position: relative !important;
+  z-index: 3 !important;
+}  
+
+#list-view > hbox {
+  background: rgba(240, 240, 240, 0.92) !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+#categories,
+#addon-list,
+.view-header.global-info-container,
+.view-header,
+#view-port-container {
+  background: transparent !important;
+}
+
+#addons-page {
+  -moz-appearance: none !important;
+  padding: 0 !important;
+  background: #F0F0F0 !important;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+
+#view-port-container {
+  border: 0px solid;
+}
+
+.nav-button,
+#header-utils-btn {
+  list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
+  padding: 0px!important;
+  padding-bottom: 1px!important;
+  -moz-padding-start: 1px!important;
+  margin-top: -4px!important; 
+  margin-bottom: 0px!important; 
+  background: transparent!important;
+  background-clip: padding-box!important;
+  border: 1px solid!important;
+  border-color: transparent!important;
+  border-width: 5px!important;
+  color: black!important;
+  box-shadow: none!important;
+}
+
+#back-btn[disabled="true"] .toolbarbutton-icon,
+#forward-btn[disabled="true"] .toolbarbutton-icon {
+  opacity: 1 !important;
+}
+
+#back-btn:-moz-locale-dir(ltr),
+#forward-btn:-moz-locale-dir(rtl) {
+  -moz-image-region: rect(0, 18px, 18px, 0);
+}
+
+#back-btn:-moz-locale-dir(rtl),
+#forward-btn:-moz-locale-dir(ltr) {
+  -moz-image-region: rect(0, 36px, 18px, 18px);
+}
+
+#back-btn[disabled="true"]:-moz-locale-dir(ltr),
+#forward-btn[disabled="true"]:-moz-locale-dir(rtl) {
+  -moz-image-region: rect(18px, 18px, 36px, 0);
+}
+
+#back-btn[disabled="true"]:-moz-locale-dir(rtl),
+#forward-btn[disabled="true"]:-moz-locale-dir(ltr) {
+  -moz-image-region: rect(18px, 36px, 36px, 18px);
+}
+
+.nav-button:hover:not([disabled="true"]),
+#header-utils-btn:hover {
+  border-image: url("chrome://global/skin/icons/browser_action_hot.png") 5 fill repeat stretch !important;
+}
+
+.nav-button:hover:active:not([disabled="true"]),
+#header-utils-btn:hover:active,
+#header-utils-btn[open="true"] {
+  border-image: url("chrome://global/skin/icons/browser_action_pressed.png") 5 fill repeat stretch !important;
+}
+
+/*** global warnings ***/
+
+.global-warning-container {
+  overflow-x: hidden;
+}
+
+.global-warning {
+  -moz-box-align: center;
+  padding: 0 8px;
+  color: #8c5e1c;
+  font-weight: bold;
+}
+
+#detail-view .global-warning {
+  padding: 4px 12px;
+}
+
+/* Plugins aren't yet disabled by safemode (bug 342333),
+   so don't show that warning when viewing plugins. */
+#addons-page[warning="safemode"] .view-pane[type="plugin"] .global-warning-container,
+#addons-page[warning="safemode"] #detail-view[loading="true"] .global-warning-container {
+  background-color: inherit;
+  background-image: none;
+}
+
+/*** notification icons ***/
+
+.warning-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-warning.png");
+  width: 15px;
+  height: 15px;
+}
+
+.error-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png");
+  width: 15px;
+  height: 15px;
+}
+
+.pending-icon,
+.info-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-positive.png");
+  width: 15px;
+  height: 15px;
+}
+
+.addon-view[pending="disable"] .pending-icon,
+.addon-view[pending="uninstall"] .pending-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
+  width: 15px;
+  height: 15px;
+}
+
+/*** view alert boxes ***/
+
+.alert-container {
+  -moz-box-align: center;
+}
+
+.alert-spacer-before {
+  -moz-box-flex: 1;
+}
+
+.alert-spacer-after {
+  -moz-box-flex: 3;
+}
+
+.alert {
+  -moz-box-align: center;
+  color: #333;
+}
+
+.alert .alert-title {
+  font-weight: bold;
+  font-size: 200%;
+  margin-bottom: 15px;
+}
+
+.alert .addon-control {
+  margin: 1em 2em;
+}
+
+.loading {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*** category selector ***/
+
+#categories {
+  -moz-appearance: none;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 14px;
+  min-width: 155px;
+}
+
+.category,
+.category-name,
+.addon-control.remove {
+  cursor: pointer;
+}
+
+.category-name {
+  font-size: 14px !important;
+}
+
+.category {
+  -moz-margin-start: 0px;
+  -moz-margin-end: 0px;
+  -moz-border-start: 6px solid transparent;
+  color: #999999;
+  min-height: 17px;
+  padding: 2px 0 3px 12px;
+  text-transform: uppercase;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+@media not all and (-moz-windows-compositor) {
+  .category {
+    padding: 4px 0 5px 12px;
+  }
+}
+
+.category[disabled] {
+  min-height: 0px;
+  padding: 0;
+}
+
+.category[disabled] {
+  border-top: 0;
+  border-bottom: 0;
+  height: 0;
+  opacity: 0;
+  transition-property: height, opacity;
+  transition-duration: 1s, 0.8s;
+}
+
+.category:not([disabled]) {
+  height: auto;
+  transition-property: height, opacity;
+  transition-duration: 1s, 0.8s;
+}
+
+.category[selected] {
+  -moz-border-start-color: rgb(78, 87, 100);
+  color: rgb(70, 78, 90);
+}
+
+.category-name {
+  font-size: 12px;
+}
+
+.category-badge {
+  padding: 0;
+  margin: 0;
+}
+
+.category-badge[value="0"] {
+  visibility: hidden;
+}
+
+.category-icon {
+  width: 32px;
+  height: 32px;
+  -moz-margin-start: 6px;
+  display: none;
+}
+
+#category-search > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-search.png");
+}
+#category-discover > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-discover.png");
+}
+#category-locale > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-languages.png");
+}
+#category-searchengine > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-searchengines.png");
+}
+#category-extension > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
+}
+#category-service > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
+}
+#category-theme > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-themes.png");
+}
+#category-plugin > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-plugins.png");
+}
+#category-dictionary > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-dictionaries.png");
+}
+#category-availableUpdates > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-available.png");
+}
+#category-recentUpdates > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-recent.png");
+}
+
+/*** header ***/
+
+#header {
+  padding: 0px;
+  margin: 0px; 
+  min-height: 36px;
+  -moz-padding-start: 23px;
+  -moz-padding-end: 23px;
+}
+
+#header-search {
+  width: 220px;
+}
+
+#header-utils-btn {
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  -moz-margin-end: 8px;
+}
+
+#header-utils-btn .toolbarbutton-icon {
+  padding-top: 2px;
+  margin: -1px 0;
+}
+
+#header-utils-btn > .toolbarbutton-menu-dropmarker {
+  display: none;
+  padding: 0;
+}
+
+.view-header {
+  margin: 0;
+  min-height: 31px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+/*** sorters ***/
+
+.sort-controls {
+  -moz-appearance: none;
+}
+
+.sorter {
+  -moz-appearance: none;
+  border-radius: 2px !important;
+  padding: 0 6px;
+  margin: 2px 8px 2px 0;
+  min-width: 12px !important;
+  background-color: whiteSmoke;
+  background-image: linear-gradient(to bottom, whiteSmoke, #F1F1F1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color:#444;
+  box-shadow: none;
+}
+
+.sorter .button-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.sorter:hover {
+  background-image: linear-gradient(to bottom, #F8F8F8, #F1F1F1);
+  border: 1px solid #C6C6C6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+.sorter:hover:active,
+.sorter[checkState="1"],
+.sorter[checkState="2"] {
+  background-color: #F6F6F6;
+  background-image: linear-gradient(#F6F6F6,#F1F1F1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sorter[checkState="1"] {
+  list-style-image: url("chrome://global/skin/arrow/sort_desc.png");
+}
+
+.sorter[checkState="2"] {
+  list-style-image: url("chrome://global/skin/arrow/sort_asc.png");
+}
+
+.sorter .button-icon {
+  -moz-margin-start: -3px;
+  -moz-margin-end: 3px;
+}
+
+/*** discover view ***/
+
+.discover-spacer-before,
+.discover-spacer-after {
+  -moz-box-flex: 1;
+}
+
+#discover-error .alert {
+  max-width: 45em;
+  -moz-box-flex: 1;
+}
+
+.discover-logo {
+  list-style-image: url("chrome://mozapps/skin/extensions/discover-logo.png");
+  -moz-margin-end: 15px;
+}
+
+.discover-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+
+.discover-description {
+  text-align: justify;
+  margin: 0 0 15px 0;
+}
+
+.discover-footer {
+  text-align: justify;
+}
+
+
+/*** list ***/
+
+.list {
+  -moz-appearance: none;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.addon {
+  -moz-padding-end: 5px;
+  color: rgb(151, 156, 160);
+  font-size: 13px;
+  border-top: 0px solid transparent;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  margin: 0;
+  padding: 6px 0px;
+}
+
+.details {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  -moz-margin-start: 0.5em;
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  margin: 3px 7px;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+.content-inner-container {
+  width: auto;
+  height: auto;
+  margin: 3px 0px;
+  -moz-margin-end: 20px;
+}
+
+.icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
+  max-width: 48px;
+  max-height: 48px;
+}
+
+.addon[active="false"] .icon {
+  opacity: .75;
+  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+}
+
+.addon-view[type="theme"] .icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
+}
+
+.addon-view[type="locale"] .icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/localeGeneric.png");
+}
+
+.addon-view[type="plugin"] .icon {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+}
+
+.name-container {
+  margin-top: -1px;
+  margin-bottom: 0;
+  -moz-margin-start: -6px;
+  -moz-box-align: end;
+  -moz-box-flex: 1;
+  color: rgb(48, 57, 66);
+}
+
+.name-container > .name {
+  font-size: 14px;
+  font-weight: 500;
+  -moz-padding-end: 20px;
+}
+
+.name-container > .version,
+.name-container > .disabled-postfix {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.creator {
+  font-weight: bold;
+}
+
+.creator .text-link {
+  color: #0066CC;
+}
+
+.description-container {
+  -moz-box-align: center;
+}
+
+.description {
+  margin: 0;
+}
+
+.warning,
+.pending,
+.error {
+  -moz-margin-start: 41px;
+  -moz-box-align: center;
+}
+
+richlistitem[pending="uninstall"] {
+  -moz-box-orient: vertical;
+  padding: 0;
+}
+
+richlistitem[pending="uninstall"] .pending {
+  -moz-margin-start: 39px;
+}
+
+.content-container,
+.basicinfo-container {
+  -moz-box-align: start;
+}
+
+.addon[status="installing"] > .content-container {
+  -moz-box-align: stretch;
+}
+
+.advancedinfo-container,
+.update-info-container {
+  -moz-box-align: center;
+}
+
+.update-available {
+  -moz-box-align: end;
+}
+
+.install-status-container {
+  -moz-box-pack: end;
+  -moz-box-align: end;
+}
+
+.name-outer-container {
+  -moz-box-pack: center;
+}
+
+.relnotes-toggle-container,
+.icon-outer-container {
+  -moz-box-pack: start;
+}
+
+.status-container,
+.control-container {
+  -moz-box-pack: end;
+  color: #000000 !important;
+}
+
+.addon-view:not([active="false"]) .warning {
+  color: #8C5E1C;
+}
+
+.addon-view .error {
+  color: #864441;
+}
+
+.addon-view .pending {
+  color: #298A27;
+}
+
+.addon-view[pending="disable"] .pending,
+.addon-view[pending="uninstall"] .pending {
+  color: #62666E;
+}
+
+.addon .relnotes-container {
+  -moz-box-align: start;
+  -moz-margin-start: 6px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
+}
+
+.addon[show-relnotes] .relnotes-container {
+  opacity: 1;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
+}
+
+.addon .relnotes-header {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.addon .relnotes-toggle {
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  -moz-box-direction: reverse;
+  cursor: pointer;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+}
+
+.addon .relnotes-toggle > .button-box > .button-icon {
+  -moz-padding-start: 4px;
+}
+
+.addon-view:not([active="false"]):not([selected])[notification="warning"] {
+  background-color: hsla(45,100%,55%,.08);
+}
+
+.addon-view[notification="error"] {
+  background-color: rgba(221, 75, 57, 0.2);
+}
+
+.addon-view[pending="enable"],
+.addon-view[pending="upgrade"],
+.addon-view[pending="install"] {
+  background-color: rgb(235, 250, 239) !important;
+}
+
+.addon-view[pending="disable"],
+.addon-view[pending="uninstall"] {
+  background-color: rgba(0, 0, 0, .06) !important;
+}
+
+.addon[active="false"] .name-container,
+.addon[active="false"] .description-container {
+  color: rgb(151, 156, 160);
+}
+
+.addon[selected] {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.addon[show-relnotes] .relnotes-toggle {
+  list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
+}
+
+/*** search view ***/
+
+#search-filter {
+  padding: 5px 20px;
+  border-bottom: 1px solid #CCCCCC;
+  overflow-x: hidden;
+}
+
+#search-filter-label {
+  font-weight: bold;
+  color: grey;
+}
+
+.search-filter-radio {
+  -moz-appearance: none;
+  padding: 0 6px;
+  margin: 0 3px;
+  border-radius: 10000px;
+}
+
+.search-filter-radio[selected] {
+  background-color: grey;
+  color: white;
+}
+
+.search-filter-radio .radio-check-box1 {
+  display: none;
+}
+
+.search-filter-radio .radio-icon {
+  display: none;
+}
+
+#search-allresults-link {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+/*** detail view ***/
+
+#detail-view .loading {
+  opacity: 0;
+}
+
+#detail-view[loading-extended] .loading {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.detail-view-container {
+  padding: 0 2em 2em 2em;
+  font-size: 110%;
+}
+
+#detail-notifications {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#detail-notifications .warning,
+#detail-notifications .pending,
+#detail-notifications .error {
+  -moz-margin-start: 0;
+}
+
+#detail-icon {
+  -moz-margin-end: 10px;
+  margin-top: 6px;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+#detail-summary {
+  margin-bottom: 2em;
+}
+
+#detail-name-container {
+  font-size: 200%;
+}
+
+#detail-name-container > label {
+  font-size: 100%;
+}
+
+#detail-screenshot {
+  -moz-margin-end: 2em;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#detail-screenshot[loading] {
+  background-image: url("chrome://global/skin/icons/loading_16.png"),
+                    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+
+#detail-screenshot[loading="error"] {
+  background-image: url("chrome://global/skin/media/error.png"),
+                    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+#detail-desc-container {
+  margin-bottom: 2em;
+}
+
+#detail-desc, #detail-fulldesc {
+  -moz-margin-start: 6px;
+  /* This is necessary to fix layout issues with multi-line descriptions, see
+     bug 592712*/
+  outline: solid transparent;
+  white-space: pre-wrap;
+  min-width: 10em;
+}
+
+#detail-fulldesc {
+  margin-top: 1em;
+}
+
+#detail-contributions {
+  border-radius: 5px;
+  border: 1px solid #D2DBE8;
+  margin-bottom: 2em;
+  padding: 1em;
+  background-color: #F3F7FB;
+}
+
+#detail-contrib-description {
+  font-style: italic;
+  margin-bottom: 1em;
+  color: #373D48;
+}
+
+#detail-contrib-suggested {
+  color: grey;
+  font-weight: bold;
+}
+
+#detail-contrib-btn {
+  list-style-image: url("chrome://mozapps/skin/extensions/heart.png");
+  box-shadow: inset 0 1px 0 0 rgb(129, 169, 243),
+      0 1px 2px rgba(0, 0, 0, .2);
+  background: linear-gradient(rgb(112, 154, 241),
+      rgb(108, 148, 240) 44%, rgb(95, 132, 238));
+  border: 1px solid rgb(53, 116, 203);
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgb(72, 101, 228);
+}
+
+#detail-contrib-btn .button-box {
+  padding: 1px 6px;
+}
+
+#detail-contrib-btn .button-icon {
+  -moz-margin-end: 4px;
+}
+
+#detail-contrib-btn:not(:active):hover {
+  box-shadow: inset 0 1px 0 0 rgb(129, 169, 243),
+      0 1px 2px rgba(0, 0, 0, .3);
+  background: linear-gradient(rgb(165, 188, 245),
+      rgb(108, 148, 240) 70%, rgb(95, 132, 238));
+  border: 1px solid rgb(53, 116, 203);
+}
+
+#detail-contrib-btn:active:hover {
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, .1);
+  background: linear-gradient(rgb(112, 154, 241),
+      rgb(108, 148, 240) 44%, rgb(95, 132, 238));
+  border: 1px solid rgb(53, 116, 203);
+}
+
+
+#detail-grid {
+  margin-bottom: 2em;
+}
+
+#detail-grid > columns > column:first-child {
+  min-width: 15em;
+  max-width: 25em;
+}
+
+.detail-row[first-row="true"],
+.detail-row-complex[first-row="true"],
+setting[first-row="true"] {
+  border-top: none;
+}
+
+.detail-row,
+.detail-row-complex,
+setting {
+  border-top: 2px solid;
+  -moz-border-top-colors: rgba(28, 31, 37, 0.1) rgba(255, 255, 255, 0.1);
+  -moz-box-align: center;
+  min-height: 30px;
+}
+
+#detail-controls {
+  margin-bottom: 1em;
+}
+
+setting[first-row="true"] {
+  margin-top: 2em;
+}
+
+setting {
+  -moz-box-align: start;
+}
+
+.preferences-alignment {
+  min-height: 30px;
+  -moz-box-align: center;
+}
+
+.preferences-description {
+  font-size: 90.9%;
+  color: graytext;
+  margin-top: -2px;
+  -moz-margin-start: 2em;
+  white-space: pre-wrap;
+}
+
+.preferences-description:empty {
+  display: none;
+}
+
+setting[type="radio"] > radiogroup {
+  -moz-box-orient: horizontal;
+}
+
+menulist { /* Fixes some styling inconsistencies */
+  margin: 1px 5px 2px 5px;
+}
+
+/*** creator ***/
+
+.creator > label {
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+
+.creator > .text-link {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/*** rating ***/
+
+.meta-rating {
+  -moz-margin-end: 0;
+  padding-top: 2px;
+}
+
+.meta-rating > .star {
+  list-style-image: url("chrome://mozapps/skin/extensions/rating-not-won.png");
+  padding: 0 1px;
+}
+
+.meta-rating > .star[on="true"] {
+  list-style-image: url("chrome://mozapps/skin/extensions/rating-won.png");
+}
+
+/*** download progress ***/
+
+.status {
+  display: none!important;
+}
+
+.download-progress {
+  -moz-appearance: none!important;
+  background-color: #e6e6e6!important;
+  border: 0px solid transparent!important;
+  border-radius: 3px!important;
+  height: 6px!important;
+  min-height: 6px!important;
+  -moz-margin-end: 35px !important;
+  width: 190px!important;
+}
+
+.download-progress .progress {
+  -moz-appearance: none!important;
+  background-color: transparent!important;
+  padding: 0!important;
+  margin: 0!important;
+  border: none!important;
+}
+
+.download-progress .progress .progress-bar {
+  -moz-appearance: none!important;
+  background-color: #888!important;
+  border: 0px solid transparent!important;
+  border-radius: 3px!important;
+  max-height: 6px!important;
+  min-width: 2px!important;
+  height: 6px!important;
+  min-height: 6px !important;
+  margin-top: 0px !important;
+}
+
+.download-progress .start-cap,
+.download-progress[complete] .end-cap,
+.download-progress[mode="undetermined"] .end-cap {
+  display: none!important;
+}
+
+.download-progress .cancel {
+  -moz-appearance: none;
+  margin-top: -6px !important;
+  -moz-margin-end: -25px !important;
+  padding: 0 !important;
+  box-shadow: none;
+  min-height: 16px;
+  min-width: 16px !important;
+  list-style-image: url("chrome://global/skin/icons/item_cancel.png") !important;
+  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  border-image: none !important;
+}
+
+.download-progress .cancel:hover,
+.download-progress .cancel:active:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+}
+
+.download-progress .cancel .button-box {
+  padding: 0;
+  border: none;
+}
+
+.download-progress .cancel .button-text {
+  display: none;
+}
+
+.download-progress .cancel .button-icon {
+  -moz-margin-start: 0;
+}
+
+.download-progress .status-container {
+  -moz-box-align: center;
+}
+
+.download-progress .status {
+  text-shadow: #FFF 0 0 2px;
+}
+
+/*** install status ***/
+
+.install-status {
+  -moz-box-align: center;
+}
+
+
+/*** check for updates ***/
+
+#updates-container {
+  margin-top: -4px;
+  -moz-box-align: center;
+  color: rgb(48, 57, 66);
+}
+
+#updates-installed,
+#updates-downloaded {
+  color: #298A27;
+}
+
+#update-selected {
+  margin: 12px;
+}
+
+
+/*** buttons ***/
+
+.addon-control[disabled="true"] {
+  display: none;
+}
+
+button.button-link {
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  color: rgb(17, 85, 204);
+  cursor: pointer;
+  min-width: 0;
+  margin: 0;
+  -moz-margin-end: 0.5em;
+}
+
+.text-link {
+  color: rgb(17, 85, 204);
+}
+
+.button-link:active,
+.text-link:active {
+  color: rgb(5, 37, 119);
+}
+
+/* Needed to override normal button style from inContent.css */
+button.button-link:not([disabled="true"]):active:hover {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.header-button {
+  -moz-appearance: none;
+  padding: 1px 3px;
+  color: #444;
+  text-shadow: 0 0 3px white;
+  background: linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0) 49%, 
+                                   rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
+  background-clip: padding-box;
+  border-radius: 3.5px;
+  border: 1px solid rgba(31, 64, 100, 0.4);
+  border-top-color: rgba(31, 64, 100, 0.3);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+              0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
+}
+
+.header-button[disabled="true"] {
+  opacity: 0.8;
+}
+
+.header-button[disabled="true"] > .toolbarbutton-icon {
+  opacity: 0.4;
+}
+
+.header-button:not([disabled="true"]):active:hover,
+.header-button[open="true"] {
+  background-color: rgba(61, 76, 92, 0.2);
+  border-color: rgba(39, 53, 68, 0.5);
+  box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
+}
+
+.header-button > .toolbarbutton-text {
+  display: none;
+}
+
+.relnotes-toggle,
+#header-link,
+.button-link {
+  box-shadow: none !important;
+}
+
+.addon-control.remove {
+  -moz-appearance: none !important;
+  border: 0px solid transparent !important;
+  box-shadow: none !important;
+  margin: 0 6px !important;
+  margin-top: -4px !important;
+  padding: 0 !important;
+  min-height: 24px !important;
+  min-width: 22px !important;
+  opacity: .8 !important;
+  transition: opacity 200ms !important;
+}
+
+.addon-control.remove {
+  background: url('chrome://mozapps/skin/extensions/trash1.png') 0 0 no-repeat !important;
+  background-position: center center !important;
+}
+
+.addon-control.remove .box-inherit.button-box {
+  border: 2px solid transparent !important;
+  background: url('chrome://mozapps/skin/extensions/trash2.png') 0 0 no-repeat !important;
+  transform-origin: 15% 50% !important;
+  transition: transform 150ms !important;
+  background-position: center center !important;
+}
+
+.addon-control.remove:hover .box-inherit.button-box {
+  transform: rotate(-45deg) !important;
+  transition: transform 250ms !important;
+}
+
+.addon-control.remove .button-text {
+  display: none !important;
+}
+
+
+/* OmniSidebar */
+.inSidebar .category-icon {
+  display: inline !important;
+}
+.inSidebar .category {
+  height: 32px !important;
+  padding: 2px 1px 0 1px !important;
+  border: 1px solid transparent !important;
+}
+.inSidebar .category:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+                                            rgba(255, 255, 255, 0))!important;
+  background-color: hsl(214, 91%, 97%)!important;
+  border-color: hsl(214, 91%, 85%)!important;
+}
+.inSidebar .category[selected] {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+                                            rgba(255, 255, 255, 0))!important;
+  background-color: hsl(214, 91%, 89%)!important;
+  border-color: hsl(214, 91%, 65%)!important;
+}

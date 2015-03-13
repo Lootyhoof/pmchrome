@@ -1,0 +1,151 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Toolbar */
+#placesToolbar {
+  padding: 3px;
+  -moz-padding-end: 22px;
+  -moz-appearance: none;
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #CFCFCF;
+  color: black;
+}
+
+#placesToolbar > toolbarbutton[disabled] > .toolbarbutton-icon {
+  opacity: .4;
+}
+
+#back-button,
+#forward-button {
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+}
+
+#back-button {
+  -moz-image-region: rect(0, 18px, 18px, 0);
+}
+
+#forward-button {
+  -moz-image-region: rect(0, 36px, 18px, 18px);
+}
+
+#back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+
+/* Menu */
+#placesMenu {
+  -moz-appearance: none;
+  border: none;
+}
+
+#placesMenu > menu {
+  -moz-appearance: none !important;
+  padding: 1px 3px;
+  margin-top: 0px; 
+  margin-bottom: 0px;
+  background: transparent;
+  background-clip: padding-box; 
+  border: 1px solid;
+  border-color: transparent;
+  border-width: 5px;
+  box-shadow: none;
+}
+
+#placesMenu > menu:hover {
+  border-image: url("chrome://global/skin/icons/browser_action_hot.png") 5 fill repeat stretch;
+}
+
+#placesMenu > menu:hover:active,
+#placesMenu > menu[open="true"] {
+  border-image: url("chrome://global/skin/icons/browser_action_pressed.png") 5 fill repeat stretch;
+}
+
+#placesMenu > menu > .menubar-text {
+  display: none;
+}
+
+#clearDownloadsButton {
+  padding: 1px 3px;
+  list-style-image: url("chrome://global/skin/icons/black_trash.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#clearDownloadsButton > .toolbarbutton-text {
+  display: none;
+}
+
+/* organize, view and maintenance buttons icons */
+#organizeButton, 
+#viewMenu, 
+#maintenanceButton {
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
+}
+
+/* organize button */
+#organizeButton {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+/* view button */
+#viewMenu {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+/* maintenance button */
+#maintenanceButton {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+/* Root View */
+#placesView {
+  border-top: none;
+}
+
+/* Info box */
+#detailsDeck {
+  border-top: 2px solid #d4d4d4;
+  padding: 7px 14px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
+}
+
+#searchFilter {
+  width: 220px;
+}
+
+#searchFilter .textbox-search-icon {
+  -moz-padding-start: 2px;
+  -moz-padding-end: 2px;
+}
+
+#placesToolbox {
+  -moz-appearance: none;
+  background-color: transparent;
+  border-top: none;
+}
+
+#placesList {
+  background-color: #F0F0F0;
+}
+
+#placesView {
+  background-color: #FFFFFF;
+}
+
+#placesView > splitter {
+  border: 0;
+  -moz-border-end: 1px solid #C0C0C0;
+  min-width: 0;
+  width: 3px;
+  background-color: transparent;
+  -moz-margin-start: -3px;
+  position: relative;
+}

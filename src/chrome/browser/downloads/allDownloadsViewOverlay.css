@@ -1,0 +1,155 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#downloadsRichListBox {
+  -moz-appearance: none;
+  margin: 0;
+}
+
+richlistitem {
+  margin: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #EBEBEB;
+  background: transparent;
+  padding: 8px;
+}
+
+richlistitem:first-child {
+  border-top: 1px solid transparent;
+}
+
+richlistitem:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+#downloadsRichListBox > richlistitem.download {
+  height: 4em;
+  padding: 0 6px;
+}
+
+.downloadTypeIcon {
+  -moz-margin-end: 8px;
+  /* explicitly size the icon, so size doesn't vary on hidpi systems */
+  height: 32px;
+  width: 32px;
+}
+
+.blockedIcon {
+  list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+.downloadTarget {
+  margin-bottom: 6px;
+  cursor: inherit;
+}
+
+.downloadDetails {
+  color: #666666;
+  cursor: inherit;
+}
+
+.downloadButton {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  margin-top: -18px;
+  border: none;
+  background: transparent;
+  padding: 5px;
+  list-style-image: url("chrome://browser/skin/downloads/buttons.png");
+  box-shadow: none;
+}
+
+.downloadButton > .button-box {
+  padding: 0;
+}
+
+/*** Button icons ***/
+
+.downloadButton.downloadCancel {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadCancel {
+   -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadCancel:hover {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadCancel:active {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+.downloadButton.downloadShow {
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow {
+   -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow:hover {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow:active {
+  -moz-image-region: rect(16px, 64px, 32px, 48px);
+}
+
+.downloadButton.downloadRetry {
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadRetry {
+   -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadRetry:hover {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadRetry:active {
+  -moz-image-region: rect(32px, 64px, 48px, 48px);
+}
+
+#downloadsListBox  richlistitem {
+  transition: 0ms background-color;
+}
+
+#downloadsRichListBox > richlistitem.download:hover,
+#downloadsRichListBox > richlistitem.download:active,
+#downloadsRichListBox > richlistitem.download[selected] {
+  color: inherit;
+  background-color: #F3F3F3 !important;
+  outline: none;
+}
+
+.download.download-state .downloadProgress {
+  -moz-appearance: none;
+  background-color: #e6e6e6;
+  border: 1px solid #D0D0D0;
+  border-radius: 2px;
+  height: 11px;
+  min-height: 11px;
+}
+
+.download.download-state .progress-bar {
+  -moz-appearance: none;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0)),
+                    linear-gradient(to left, #66C2EF 4px, #4C95F5 16px, #4C95F5 100%);
+  border: 0px solid transparent;
+  border-top-color: #61B1F8;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.12) inset, 0px 0px 0px 1px #4189ED;
+  height: 9px;
+  min-width: 9px;
+}

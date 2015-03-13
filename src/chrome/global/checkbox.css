@@ -1,0 +1,86 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== checkbox.css ===================================================
+  == Styles used by the XUL checkbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: checkbox ::::: */
+
+checkbox {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  margin: 2px 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 2px;
+}
+
+.checkbox-label-box {
+  -moz-margin-start: 1px;
+  border: 1px solid transparent;
+  padding: 0px 3px;
+}
+
+.checkbox-icon {
+  -moz-margin-end: 2px;
+}
+
+.checkbox-label {
+  margin: 0 !important;
+}
+
+/* ..... focused state ..... */
+
+checkbox:not([disabled="true"]):-moz-focusring .checkbox-check,
+checkbox:not([disabled="true"]):-moz-focusring:hover .checkbox-check,
+checkbox:not([disabled="true"]):-moz-focusring:hover:active .checkbox-check  {
+  border-color: rgb(77, 144, 254);
+  outline: none;
+}
+
+/* ..... disabled state ..... */
+
+checkbox[disabled="true"] > .checkbox-check {
+  background-color: -moz-Dialog;
+}
+
+checkbox[disabled="true"] {
+  color: rgb(150, 150, 150);
+  opacity: .75;
+}
+
+/* ::::: checkmark image ::::: */
+
+.checkbox-check {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  min-width: 14px;
+  min-height: 14px;
+  background-color: #F9F9F9;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 0 1px #FEFEFE;
+  padding: 0px;
+}
+
+checkbox:not([disabled="true"]):hover > .checkbox-check {
+  background-color: #FCFCFC;
+}
+
+checkbox:not([disabled="true"]):hover:active > .checkbox-check {
+  background-color: #E6E6E6;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 1px 0 #DADADA;
+}
+
+/* ..... checked state ..... */
+
+checkbox[checked="true"] .checkbox-check {
+  list-style-image: url("chrome://global/skin/checkbox/check.png");
+  -moz-image-region: rect(0, 12px, 12px, 0);
+}

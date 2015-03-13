@@ -1,0 +1,84 @@
+html {
+  background: white;
+  margin: 50px 40px 20px 40px;
+}
+
+@media (max-width: 640px), (max-height: 640px) {
+  html {
+    margin: 50px 40px 20px 40px;
+  }
+}
+
+body {
+ padding: 16px;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+h1 {
+  padding-top: 4px;
+}
+
+#errorPageContainer {
+  background-color: #eee;
+  border: 0px solid #AAA;
+  border-radius: 5px;
+  box-shadow: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding: 0px 10px 0;
+}
+
+#errorLongContent {
+  padding: 1px 0;
+  margin-top: -20px;
+  color: black !important;
+  box-shadow: none !important;
+}
+
+body.private #errorTitleText {
+  padding-top: 6px !important;
+  padding-bottom: 0px !important;
+  background: transparent !important;
+  border: 0px solid #AAA !important;
+  box-shadow: none !important;
+}
+
+body.private > #errorPageContainer {
+  background-image: none;
+}
+
+body.private #errorTitle {
+  background-image: url("chrome://browser/skin/Privacy-48-2.png") !important;
+  background-position: center right !important;
+  background-repeat: no-repeat !important;
+  height: 52px !important;
+  width: 99.5% !important;
+}
+
+body.normal > #errorPageContainer {
+  background-image: url("chrome://global/skin/icons/question-48.png");
+  background-repeat: no-repeat !important;
+}
+
+#clearRecentHistoryDesc {
+  margin-top: 2em;
+}
+
+#startPrivateBrowsingDesc > button {
+  -moz-margin-start: 0;
+}
+
+#moreInfo:-moz-dir(rtl) {
+  background-position: top right;
+}
+
+#moreInfoText {
+  margin-bottom: 0;
+}
+
+#moreInfoLinkContainer {
+  margin-top: 0.5em;
+}
