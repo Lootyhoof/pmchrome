@@ -25,7 +25,8 @@
   background-color: transparent;
 }
 
-#padlock-ib-left[padshow="ib-left"][level="low"] {
+#padlock-ib-left[padshow="ib-left"][level="low"],
+#padlock-ib-left[padshow="ib-left"][level="mixed"] {
   list-style-image: url("padlock_mod_low.png") !important;
   padding:2px;
   background-color: transparent;
@@ -47,7 +48,8 @@
   background-color: transparent;
 }
 
-#padlock-ub-right[padshow="ub-right"][level="low"] {
+#padlock-ub-right[padshow="ub-right"][level="low"],
+#padlock-ub-right[padshow="ub-right"][level="mixed"] {
   list-style-image: url("padlock_mod_low.png") !important;
   background-color: transparent;
 }
@@ -67,7 +69,8 @@
   background-color: transparent;
 }
 
-#padlock-sb[padshow="statbar"][level="low"] {
+#padlock-sb[padshow="statbar"][level="low"],
+#padlock-sb[padshow="statbar"][level="mixed"] {
   list-style-image: url("padlock_mod_low.png") !important;
   background-color: transparent;
 }
@@ -87,7 +90,8 @@
   background-color: transparent;
 }
 
-#padlock-tab[padshow="tabs-bar"][level="low"] {
+#padlock-tab[padshow="tabs-bar"][level="low"],
+#padlock-tab[padshow="tabs-bar"][level="mixed"] {
   list-style-image: url("padlock_mod_low.png") !important;
   background-color: transparent;
 }
