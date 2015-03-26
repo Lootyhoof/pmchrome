@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2
+- replace appmenu icon with built-in Pale Moon icon
+
 ### 1.0.1
 - add mixed padlock state
 - remove titlebar on tabs-on-top
