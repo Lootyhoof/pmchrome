@@ -26,6 +26,8 @@
     #main-window[tabsontop=false]:after { /* Windows 8 */
 	  margin-left: 0px !important;
 	  }
+	}
+}
 
 /* Pale Moon feed icon */
 #ub-feed-button,
