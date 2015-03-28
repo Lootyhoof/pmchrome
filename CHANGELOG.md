@@ -1,6 +1,9 @@
 # Changelog
 
-## 1.0.2
+### 1.0.3
+- bug fixes
+
+### 1.0.2
 - replace appmenu icon with built-in Pale Moon icon
 
 ### 1.0.1
