@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.4
+- shade verifiedDomain domains
+
 ### 1.0.3
 - bug fixes
 
