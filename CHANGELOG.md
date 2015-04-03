@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.5
+- fix newtab quickdial titles
+
 ### 1.0.4
 - shade verifiedDomain domains
 
