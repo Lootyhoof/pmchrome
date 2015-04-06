@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.0.6
+- fix tab titles when using personas
+- fix titlebar spacing (again)
+
 ### 1.0.5
 - fix newtab quickdial titles
 
