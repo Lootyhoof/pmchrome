@@ -1797,8 +1797,8 @@ window[sizemode="maximized"] #navigator-toolbox {
 }
 
 .tabbrowser-tab:-moz-lwtheme {
-  color: inherit;
-  text-shadow: inherit;
+  color: black;
+  text-shadow: none;
 }
 
 .tabbrowser-tab .tab-text {
