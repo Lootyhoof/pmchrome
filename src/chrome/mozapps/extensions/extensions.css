@@ -10,16 +10,7 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-
-
-#header {
-  background-image: linear-gradient(#FAFAFA, rgba(240, 240, 240, 0.92)) !important;
-  position: relative !important;
-  z-index: 3 !important;
-}  
-
 #list-view > hbox {
-  background: rgba(240, 240, 240, 0.92) !important;
   position: relative !important;
   z-index: 3 !important;
 }
@@ -35,12 +26,14 @@
 #addons-page {
   -moz-appearance: none !important;
   padding: 0 !important;
-  background: #F0F0F0 !important;
-  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  background: #FFFFFF !important;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 75%;
 }
 
 #view-port-container {
-  border: 0px solid;
+  border: none;
+  border-top: 1px solid #EEEEEE;
 }
 
 .nav-button,
@@ -49,7 +42,6 @@
   padding: 0px!important;
   padding-bottom: 1px!important;
   -moz-padding-start: 1px!important;
-  margin-top: -4px!important; 
   margin-bottom: 0px!important; 
   background: transparent!important;
   background-clip: padding-box!important;
@@ -307,13 +299,23 @@
 #header {
   padding: 0px;
   margin: 0px; 
-  min-height: 36px;
+  min-height: 52px;
   -moz-padding-start: 23px;
   -moz-padding-end: 23px;
 }
 
 #header-search {
   width: 220px;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  background-origin: border-box;
+  color: #444;
+  font: inherit;
+  min-height: 2em;
+  padding: 3px;
+  outline: none;
+  padding-bottom: 4px;
+  background-image: none;
 }
 
 #header-utils-btn {
@@ -334,7 +336,6 @@
 .view-header {
   margin: 0;
   min-height: 31px;
-  border-bottom: 1px solid #F0F0F0;
 }
 
 /*** sorters ***/
@@ -435,8 +436,6 @@
   -moz-padding-end: 5px;
   color: rgb(151, 156, 160);
   font-size: 13px;
-  border-top: 0px solid transparent;
-  border-bottom: 1px solid rgb(232, 232, 232);
   margin: 0;
   padding: 6px 0px;
 }
