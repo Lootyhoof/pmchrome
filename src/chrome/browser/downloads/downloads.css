@@ -228,7 +228,7 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
 
 #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 108, 18, 90) center no-repeat;
+                              0, 108, 18, 90) center no-repeat !important;
   min-width: 18px;
   min-height: 18px;
 }
@@ -315,11 +315,15 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
   }
 }
 
-#TabsToolbar[tabsontop=true] #downloads-indicator-counter,
-#downloads-indicator-counter:-moz-lwtheme-brighttext {
-  color: white;
-  text-shadow: 0 0 1px rgba(0,0,0,.7),
-               0 1px 1.5px rgba(0,0,0,.5);
+@media (-moz-os-version: windows-xp),
+       (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  #TabsToolbar[tabsontop=true] > #downloads-indicator-counter,
+  #downloads-indicator-counter:-moz-lwtheme-brighttext {
+    color: white;
+    text-shadow: 0 0 1px rgba(0,0,0,.7),
+                 0 1px 1.5px rgba(0,0,0,.5);
+  }
 }
 
 #downloads-indicator-progress {
