@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.1.0
+- Pale Moon v26 compatibility
+- fix window borders on Windows 10
+- use more modern popup style (fixes Linux issues)
+- ensure Linux doesn't receive WinXP/WinClassic styles
+- Linux: style appmenu
+
 ### 1.0.6
 - fix tab titles when using personas
 - fix titlebar spacing (again)
