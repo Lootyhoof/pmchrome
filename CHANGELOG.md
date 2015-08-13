@@ -6,6 +6,7 @@
 - use more modern popup style (fixes Linux issues)
 - ensure Linux doesn't receive WinXP/WinClassic styles
 - Linux: style appmenu
+- make about:addons look more like Chrome
 
 ### 1.0.6
 - fix tab titles when using personas
