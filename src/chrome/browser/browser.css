@@ -256,7 +256,7 @@
     padding-bottom: 4px !important; 
   }
 
-  #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
+  #main-window[tabsontop="true"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
     margin-top: -4px !important;
     margin-bottom: -3px !important;
     -moz-padding-start: 46px !important; 
