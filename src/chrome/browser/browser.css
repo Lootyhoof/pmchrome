@@ -262,6 +262,12 @@
     -moz-padding-start: 46px !important; 
     -moz-padding-end: 110px !important; 
   }
+  
+  @media (-moz-os-version: windows-win10) {
+	#main-window[tabsontop="true"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
+	  -moz-padding-end: 145px !important;
+	}
+  }
 
   #main-window #appmenu-button {
     margin-top: 0px !important;
