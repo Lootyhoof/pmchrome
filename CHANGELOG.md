@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.1
+- fix toolbar margins when viewing fullscreen video
+- change tab bar margin on Windows 10
+
 ### 1.1.0
 - Pale Moon v26 compatibility
 - fix window borders on Windows 10
