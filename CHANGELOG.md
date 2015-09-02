@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.2
+- fix vertical toolbar borders
+
 ### 1.1.1
 - fix toolbar margins when viewing fullscreen video
 - change tab bar margin on Windows 10
