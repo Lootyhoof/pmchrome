@@ -3572,8 +3572,6 @@ chatbox {
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar {
   border-top: 2px solid;
   -moz-border-top-colors: rgba(0,0,0,.075) rgba(0,0,0,.28);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   background-clip: padding-box;
 }
 
@@ -3585,6 +3583,20 @@ chatbox {
   border-top-left-radius: 4px!important;
   border-top-right-radius: 4px!important;
   background-clip: padding-box!important;
+}
+
+@media (-moz-os-version: windows-xp),
+       (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7),
+       (-moz-os-version: windows-win8) {
+  #main-window #nav-bar,
+  #main-window > #nav-bar[collapsed=true]:not([customizing]) + toolbar,
+  #main-window > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
+  #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
+  #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar {
+	border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
 }
 
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar {
