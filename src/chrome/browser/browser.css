@@ -109,14 +109,22 @@
 
 #main-window[tabsontop=true][disablechrome] #navigator-toolbox::after {
   visibility: visible !important;
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
   border-top: 2px solid !important;
   -moz-border-top-colors: rgba(0,0,0,.075) rgba(0,0,0,.28) !important;
   background-clip: padding-box !important;
   height: 4px !important;
   background-image: linear-gradient(#F9F9F9, #F9F9F9, #F8F8F8) !important;
 }
+
+@media (-moz-os-version: windows-xp),
+       (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7),
+       (-moz-os-version: windows-win8) {
+  #main-window[tabsontop=true][disablechrome] #navigator-toolbox::after {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important; 
+  }
+}  
 
 #navigator-toolbox > toolbar:not(:-moz-lwtheme) {
   -moz-appearance: none;
