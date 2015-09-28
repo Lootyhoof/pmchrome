@@ -268,12 +268,14 @@
     margin-top: -4px !important;
     margin-bottom: -3px !important;
     -moz-padding-start: 46px !important; 
-    -moz-padding-end: 110px !important; 
+    -moz-padding-end: 145px !important; 
   }
   
-  @media (-moz-os-version: windows-win10) {
+  @media (-moz-os-version: windows-vista),
+         (-moz-os-version: windows-win7),
+         (-moz-os-version: windows-win8) {
 	#main-window[tabsontop="true"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
-	  -moz-padding-end: 145px !important;
+	  -moz-padding-end: 110px !important;
 	}
   }
 
