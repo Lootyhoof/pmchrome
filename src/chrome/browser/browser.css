@@ -3919,29 +3919,56 @@ chatbox {
          (-moz-os-version: windows-vista),
          (-moz-os-version: windows-win7) {  
     #main-window {
-      background-color: #808281;
+      background-color: #4271C9;
     }
     #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
-      background-color: #808281;
+      background-color: #4271C9;
       color: CaptionText;
     }
     #main-window[tabsontop=false] #titlebar-content:not(:-moz-lwtheme),
     #main-window[sizemode=normal] #titlebar-content:not(:-moz-lwtheme),
     #titlebar-content:not(:-moz-lwtheme) {
       padding-bottom: 0;
-      background-color: #808281;
-      box-shadow: 0 -1px 0 0 #ABACAB, 0 -2px 0 0 #3E3F3F;
+      background-image: -moz-linear-gradient(rgb(98,146,221),rgb(66,113,201));
+      box-shadow: 0 -1px 0 0 #85ABE4, 0 -2px 0 0 #595959;
+    }
+	
+	#main-window:-moz-window-inactive {
+      background-color: #99B2DD;
+    }
+	
+	#main-window[tabsintitlebar]:not([inFullscreen]):-moz-window-inactive #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
+      background-color: #99B2DD;
+      color: CaptionText;
+    }
+	
+    #main-window[tabsontop=false]:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme),
+    #main-window[sizemode=normal]:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme),
+    #main-window:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme) {
+      background-image: -moz-linear-gradient(rgb(169,195,231),rgb(154,178,221));
+      box-shadow: 0 -1px 0 0 #BDD1EC, 0 -2px 0 0 #595959;
     }
 
     #main-window[privatebrowsingmode=temporary],
     #main-window[privatebrowsingmode=temporary][tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
-      background-color: #556F95;
+      background-color: #526D92;
     }
     #main-window[privatebrowsingmode=temporary][tabsontop=false] #titlebar-content:not(:-moz-lwtheme),
     #main-window[privatebrowsingmode=temporary][sizemode=normal] #titlebar-content:not(:-moz-lwtheme),
     #main-window[privatebrowsingmode=temporary] #titlebar-content:not(:-moz-lwtheme) {
-      background-color: #556F95;
+      background-image: -moz-linear-gradient(rgb(97,122,156),rgb(84,110,148));
       box-shadow: 0 -1px 0 0 #8699B3, 0 -2px 0 0 #3E3F3F;
+    }
+	
+	#main-window[privatebrowsingmode=temporary]:-moz-window-inactive,
+    #main-window[privatebrowsingmode=temporary][tabsintitlebar]:not([inFullscreen]):-moz-window-inactive #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
+      background-color: #8391A4;
+    }
+    #main-window[privatebrowsingmode=temporary][tabsontop=false]:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme),
+    #main-window[privatebrowsingmode=temporary][sizemode=normal]:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme),
+    #main-window[privatebrowsingmode=temporary]:-moz-window-inactive #titlebar-content:not(:-moz-lwtheme) {
+      background-image: -moz-linear-gradient(rgb(147,161,178),rgb(131,146,164));
+      box-shadow: 0 -1px 0 0 #ACB7C4, 0 -2px 0 0 #3E3F3F;
     }
 
     #toolbar-menubar:not(:-moz-lwtheme),
@@ -3962,6 +3989,11 @@ chatbox {
     #main-window[sizemode="maximized"][tabsontop=false] #toolbar-menubar:not([autohide="true"]) {
       margin-top: 7px !important;
       margin-bottom: 0px !important;
+    }
+	
+	#main-menubar {
+      background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4));
+      border-radius: 3px;
     }
   }
   
