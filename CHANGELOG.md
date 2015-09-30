@@ -1,5 +1,17 @@
 # Changelog
 
+### 2.0.0
+- make network error page more closely resemble Chrome
+- make invalid SSL error page more closely resemble Chrome
+- make private browsing information page more closely resemble Chrome
+- replace icon appmenu with caption button-style appmenu
+- provide different appmenu styles for Aero, Windows 8+ and non-compositor Windows (e.g. WinXP, Classic, Aero Basic)
+- use newer connecting/loading tab icons (uplifted from FXChrome)
+- fix floating notification popup
+- improve window style for non-compositor Windows to match Chrome
+- use new caption buttons on non-compositor Windows to match Chrome
+- add new privacy icons (uplifted from FXChrome)
+
 ### 1.1.2
 - fix vertical toolbar borders
 
