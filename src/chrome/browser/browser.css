@@ -4135,6 +4135,12 @@ chatbox {
     }
   }
   
+  @media (-moz-windows-theme: aero) {
+	#main-window[sizemode=maximized] #titlebar {
+      margin-top: 4px !important;
+    }
+  }
+  
   #addon-bar {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
