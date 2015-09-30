@@ -337,6 +337,7 @@
   #appmenu-button:hover:active,
   #appmenu-button[open] {
 	background-color: rgba(255,255,255,.25);
+	box-shadow: 1px 1px 0 0px rgba(255, 255, 255, 0.25), inset 1px 1px 0 0 rgba(140,140,140,0.3) !important;
   }
 
   #main-window[privatebrowsingmode=temporary] #appmenu-button {
