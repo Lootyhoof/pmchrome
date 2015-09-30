@@ -195,48 +195,174 @@
 /* ::::: app menu button ::::: */
 
 #appmenu-button {
-  -moz-appearance: none !important;
-  margin: 0px !important;
-  min-width: 45px !important;
-  border-radius: 0 !important;
-  background: url("chrome://branding/content/icon32.png");
-  border: none !important;
-  box-shadow: none !important;
-  border-image: none !important;
-  background-repeat: no-repeat !important;
-  background-position: center bottom !important;
+  -moz-appearance: none;
+  min-height: 0 !important;
+  max-height: 20px !important;
+  min-width: 0 !important;
+  color: #fff;
+  margin-left: 2px;
+  padding: 9px 22px !important;
+  background-image: url(chrome://browser/skin/appmenu-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid !important;
+  border-top-style: none !important;
 }
 
+#main-window[privatebrowsingmode=temporary] #appmenu-button {
+  background-image: url(chrome://browser/skin/pb-icon.png);
+}
+
+@media (-moz-windows-glass) {
+  /* Aero style */
+  #appmenu-button {
+    background-image: url(chrome://browser/skin/appmenu-icon.png), 
+	                  -moz-linear-gradient(rgba(255,255,255,0.4) 30%,
+	                                       rgba(255,255,255,0.2) 40%,
+                                           rgba(255,255,255,0.2) 50%,
+                                           rgba(0,0,0,0.1) 51%,
+                                           rgba(0,0,0,0.1) 75%,
+                                           rgba(255,255,255,0.1) 100%);
+	background-color: transparent;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 
+	            1px 1px 0 0px rgba(255, 255, 255, 0.5), 
+				-1px 1px 0 0px rgba(255, 255, 255, 0.5) !important;
+    -moz-border-left-colors: rgba(0,0,0,.6) !important;
+    -moz-border-bottom-colors: rgba(0,0,0,.6) !important;
+    -moz-border-right-colors: rgba(0,0,0,.6) !important;
+    border-radius: 0 0 4px 4px !important;
+  }
+  
+  #appmenu-button:not(:hover):-moz-window-inactive {
+    background-image: url(chrome://browser/skin/appmenu-icon.png);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 
+	            1px 1px 0 0px rgba(255, 255, 255, 0.3), 
+				-1px 1px 0 0px rgba(255, 255, 255, 0.3) !important;
+    -moz-border-left-colors: rgba(0,0,0,.3) !important;
+    -moz-border-bottom-colors: rgba(0,0,0,.3) !important;
+    -moz-border-right-colors: rgba(0,0,0,.3) !important;
+  }
+
+  #appmenu-button:hover:not(:active):not([open]) {
+    background-color: rgba(0,97,255,0.75);
+  }
+  
+  #appmenu-button:hover:active,
+  #appmenu-button[open] {
+	background-color: rgba(0,72,188,0.75);
+  }
+  
+  #main-window[privatebrowsingmode=temporary] #appmenu-button {
+	background-image: url(chrome://browser/skin/pb-icon.png), 
+	                  -moz-linear-gradient(rgba(255,255,255,0.4) 30%,
+	                                       rgba(255,255,255,0.2) 40%,
+                                           rgba(255,255,255,0.2) 50%,
+                                           rgba(0,0,0,0.1) 51%,
+                                           rgba(0,0,0,0.1) 75%,
+                                           rgba(255,255,255,0.1) 100%);
+    background-color: rgb(178,0,255);
+  }
+	  
+  #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
+    background-color: rgb(187,43,255);
+  }
+
+  #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
+  #main-window[privatebrowsingmode=temporary] #appmenu-button[open] {
+    background-color: rgb(158,2,255);
+  }	
+}
+  
+@media (-moz-windows-compositor) {
+  @media not all and (-moz-os-version: windows-vista) {
+    @media not all and (-moz-os-version: windows-win7) {
+	  /* Win8+ style */
+	  #appmenu-button {
+		padding: 10px 22px !important;
+		border: none !important;
+		border-radius: 0 !important;
+        box-shadow: none !important;
+        background-color: rgba(0,0,0,0.3);
+	  }
+	  
+	  #appmenu-button:hover:not(:active):not([open]) {
+        background-color: rgb(51,99,182);
+      }
+
+      #appmenu-button:hover:active,
+      #appmenu-button[open] {
+        background-color: rgb(59,95,155);
+      }
+	  
+	  #main-window[privatebrowsingmode=temporary] #appmenu-button {
+		background-color: rgb(178,0,255);
+	  }
+	  
+	  #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
+        background-color: rgb(187,43,255);
+      }
+
+      #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
+      #main-window[privatebrowsingmode=temporary] #appmenu-button[open] {
+        background-color: rgb(158,2,255);
+      }	
+	}
+  }
+}
+
+@media not all and (-moz-windows-compositor) {
+  /* Non-Compositor style */
+  #appmenu-button {
+	max-height: 17px !important;
+	padding: 8px 22px !important;
+	border-radius: 0 0 4px 4px !important;
+    -moz-border-left-colors: rgba(0,0,0,.4) !important;
+    -moz-border-bottom-colors: rgba(0,0,0,.4) !important;
+    -moz-border-right-colors: rgba(0,0,0,.4) !important;
+	box-shadow: 1px 1px 0 0px rgba(255, 255, 255, 0.25), inset 1px 0 0 0 rgba(255, 255, 255, 0.25) !important;
+	margin-bottom: 11px !important;
+    margin-top: 0px !important;
+	background-color: transparent;
+  }
+  
+  #main-window[sizemode=maximized] #appmenu-button {
+    margin-top: 3px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  #appmenu-button:hover:not(:active):not([open]) {
+	background-color: rgba(255,255,255,.3);
+  }
+  
+  #appmenu-button:hover:active,
+  #appmenu-button[open] {
+	background-color: rgba(255,255,255,.25);
+  }
+
+  #main-window[privatebrowsingmode=temporary] #appmenu-button {
+	background-color: rgb(178,0,255);
+  }
+	  
+  #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
+    background-color: rgb(187,43,255);
+  }
+
+  #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
+  #main-window[privatebrowsingmode=temporary] #appmenu-button[open] {
+    background-color: rgb(158,2,255);
+  }
+}	
+	
 .tab-drag-preview::before {
   background: url("chrome://browser/skin/tabbrowser/browser_instance.png");
   background-repeat: no-repeat;
   background-position: center bottom;
 }
 
-#appmenu-button .box-inherit.button-box {
-  display: none;
-}
-
-#main-window[tabsontop="true"][sizemode="normal"] #appmenu-button-container { 
-  position: fixed !important;
-}
-
 @media (-moz-os-version: windows-xp),
        (-moz-os-version: windows-vista),
        (-moz-os-version: windows-win7) {
   @media not all and (-moz-windows-compositor) {
-    #appmenu-button:-moz-lwtheme {
-      margin-top: 0px;
-    }
-
-    #main-window[sizemode="maximized"][tabsontop=false] #appmenu-button {
-      margin: 0 0 12px 0 !important;
-    }
-
-    #main-window[tabsontop="true"][sizemode="normal"] #appmenu-button {
-      padding-top: 39px !important;
-    }
-
     #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) {
       -moz-margin-start: 42px !important; 
       padding-bottom: 4px !important; 
@@ -255,10 +381,10 @@
 }
 
 @media (-moz-windows-compositor) {
-  #main-window[tabsontop="true"][sizemode="normal"] #appmenu-button {
-    padding-bottom: 31px !important;
-  }
-
+  #appmenu-button {
+    margin-top: 0px;
+  }	
+	
   #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) {
     -moz-margin-start: 42px !important; 
     padding-bottom: 4px !important; 
@@ -278,21 +404,6 @@
 	  -moz-padding-end: 110px !important;
 	}
   }
-
-  #main-window #appmenu-button {
-    margin-top: 0px !important;
-    margin-bottom: -2px !important;
-    padding-bottom: 0 !important;
-    min-height: 24px !important;
-  }
-}
-
-#main-window[tabsintitlebar] #appmenu-button {
-  background-position: center center !important;
-}
-
-#main-window[privatebrowsingmode=temporary] #appmenu-button {
-  background: url("chrome://browser/skin/Privacy-48.png");
 }
 
 #appmenu-button > .button-box {
@@ -300,13 +411,9 @@
   padding: 0;
 }
 
-#appmenu-button > .button-box > .button-menu-dropmarker {
-  list-style-image: url(appmenu-dropmarker.png);
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  -moz-margin-start: .5em;
+#appmenu-button > .button-box > .button-menu-dropmarker,
+#appmenu-button > .button-box .button-text {
+  display: none;
 }
 
 .splitmenu-menuitem {
@@ -3518,13 +3625,6 @@ chatbox {
 #main-window[privatebrowsingmode=temporary] #toolbar-menubar:-moz-locale-dir(rtl) {
   background-position: top left;
 }
-
-#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
-  list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
-  width: 20px;
-  height: 16px;
-}
-
 
 @media (-moz-windows-compositor) {
   #main-window[sizemode=normal] > #titlebar > #titlebar-content > #appmenu-button-container {
