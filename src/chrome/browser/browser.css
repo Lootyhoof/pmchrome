@@ -17,7 +17,7 @@
        (-moz-os-version: windows-vista),
        (-moz-os-version: windows-win7) {
   #main-window[tabsontop="false"]:after {
-    margin-left: -80px !important;
+    margin-left: -60px !important;
     }
 }  
   
