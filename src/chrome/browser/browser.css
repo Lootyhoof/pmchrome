@@ -4063,8 +4063,31 @@ chatbox {
     }
 
     #titlebar-buttonbox {
-     position: relative;
+      position: relative;
+      margin-right: 2px;
+	  box-shadow: 1px 1px 0 0px rgba(255, 255, 255, 0.25) !important;
+	  border-radius: 0 0 4px 4px !important;
     }
+	
+	.titlebar-button {
+      border: 1px solid;
+      border-top-style: none !important;	  
+      -moz-border-left-colors: rgba(0,0,0,.4) !important;
+      -moz-border-bottom-colors: rgba(0,0,0,.4) !important;
+      -moz-border-right-colors: rgba(0,0,0,.4) !important;
+	  box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0.25) !important;
+	  padding: 2px 6px;
+	  margin-top: -1px;
+	}
+	
+	.titlebar-button:hover {
+	  background-color: rgba(255,255,255,.3) !important;
+	}
+	
+	.titlebar-button:hover:active {
+	  background-color: rgba(255,255,255,.25) !important;
+	  box-shadow: inset 1px 1px 0 0 rgba(140,140,140,0.3) !important;
+	}
 
     #titlebar-min:-moz-locale-dir(rtl),
     #titlebar-max:-moz-locale-dir(rtl),
@@ -4078,42 +4101,36 @@ chatbox {
     #restore-button,
     #titlebar-close {
       -moz-appearance: none !important;
-      list-style-image: url("chrome://global/skin/icons/windowControls.png") !important;
-      padding: 0 !important;
-      margin: 0px !important;
-      background: transparent !important;
-      border-style: none !important;
-      border-image: none !important;
+      background-color: transparent;
     }
 
     #titlebar-min {
-      -moz-image-region: rect(0, 38px, 27px, 0);
-    }
-    #titlebar-min:hover {
-      -moz-image-region: rect(27px, 38px, 54px, 0);
-    }
-    #titlebar-min:hover:active {
-      -moz-image-region: rect(54px, 38px, 81px, 0);
+      list-style-image: url(chrome://global/skin/icons/window-min.png);
+	  border-bottom-left-radius: 4px;
+	  margin-right: -1px;
     }
 
     #titlebar-max {
-      -moz-image-region: rect(0, 74px, 27px, 38px);
+      list-style-image: url(chrome://global/skin/icons/window-max.png);
+	  margin-right: -1px;
     }
-    #titlebar-max:hover {
-      -moz-image-region: rect(27px, 74px, 54px, 38px);
-    }
-    #titlebar-max:hover:active {
-      -moz-image-region: rect(54px, 74px, 81px, 38px);
-    }
+	
+	#main-window[sizemode="maximized"] #titlebar-max {
+	  list-style-image: url(chrome://global/skin/icons/window-restore.png);
+	}
 
     #titlebar-close {
-      -moz-image-region: rect(0, 112px, 27px, 74px);
+      list-style-image: url(chrome://global/skin/icons/window-close.png);
+	  border-bottom-right-radius: 4px;
+	  padding: 3px 15px !important;
     }
     #titlebar-close:hover {
-      -moz-image-region: rect(27px, 112px, 54px, 74px);
+      background-image: -moz-linear-gradient(rgb(218,84,82),rgb(217,70,69));
     }
     #titlebar-close:hover:active {
-      -moz-image-region: rect(54px, 112px, 81px, 74px);
+      background-image: -moz-linear-gradient(rgb(215,57,61),rgb(213,56,50));
+	  box-shadow: 1px 1px 0 0px rgba(255, 255, 255, 0.25), inset 1px 0 0 0 rgba(255, 255, 255, 0.25),
+                  inset 0 1px 0 0 rgb(163,61,63)!important;
     }
   }
   
