@@ -2,6 +2,11 @@ skin browser      PMChrome chrome/browser/
 skin communicator      PMChrome chrome/communicator/  
 skin mozapps      PMChrome chrome/mozapps/   
 skin global      PMChrome chrome/global/  
+<<<<<<< HEAD
 
 override chrome://browser/skin/appmenu-icon.png chrome://browser/skin/appmenu-icon-flat.png os=WINNT osversion>=6.2
 override chrome://browser/skin/pb-icon.png chrome://browser/skin/pb-icon-flat.png os=WINNT osversion>=6.2
+=======
+skin appver      PMChrome chrome/appver/25/ appversion<=26.0.0b2
+skin appver      PMChrome chrome/appver/26/ appversion>26.0.0b2
+>>>>>>> refs/remotes/origin/win10
