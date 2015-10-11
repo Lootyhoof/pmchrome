@@ -12,22 +12,10 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
-<<<<<<< HEAD
-
-/* Pale Moon: Window title fix */
-@media (-moz-os-version: windows-xp),
-       (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  #main-window[tabsontop="false"]:after {
-    margin-left: -60px !important;
-    }
-}  
-=======
->>>>>>> refs/remotes/origin/win10
   
 #main-window[tabsontop="true"]:after {
   display: none !important;
-  }
+}
 
 /* Pale Moon feed icon */
 #ub-feed-button,
