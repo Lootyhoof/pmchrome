@@ -2,3 +2,5 @@ skin browser      PMChrome chrome/browser/
 skin communicator      PMChrome chrome/communicator/  
 skin mozapps      PMChrome chrome/mozapps/   
 skin global      PMChrome chrome/global/  
+skin appver      PMChrome chrome/appver/25/ appversion<=26.0.0b2
+skin appver      PMChrome chrome/appver/26/ appversion>26.0.0b2
