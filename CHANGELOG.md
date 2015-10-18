@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.0.1
+- (Win10) round corner removal on certain UI elements
+- (Win10) shade window background on Pale Moon 26 builds later than b2
+
 ### 2.0.0
 - make network error page more closely resemble Chrome
 - make invalid SSL error page more closely resemble Chrome
