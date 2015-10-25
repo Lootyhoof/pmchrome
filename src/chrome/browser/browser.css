@@ -1381,18 +1381,6 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   padding: 1.5px;
 }
 
-.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https.png);
-}
-
-.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
-}
-
-.mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-active.png);
-}
-
 /* autocomplete */
 
 #treecolAutoCompleteImage {
