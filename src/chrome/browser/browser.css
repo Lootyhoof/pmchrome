@@ -1372,6 +1372,15 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   list-style-image: url(chrome://browser/skin/search-magnifying-glass.png);
 }
 
+#page-proxy-favicon:not([pageproxystate="valid"]):not([pageproxystate="invalid"]),
+#page-proxy-favicon:not([src]) {
+  padding: 0 !important;
+}
+
+#page-proxy-favicon[pageproxystate="valid"] {
+  padding: 1.5px;
+}
+
 .verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https.png);
 }
