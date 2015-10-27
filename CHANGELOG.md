@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.0.2
+- increase favicon padding to ensure favicons are correctly sized
+
 ### 2.0.1
 - (Win10) round corner removal on certain UI elements
 - (Win10) shade window background on Pale Moon 26 builds later than b2
