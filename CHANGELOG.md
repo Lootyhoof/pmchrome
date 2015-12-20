@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.1.0
+- (PM26) add history menu button
+- show more icons in history/bookmarks menus
+
 ### 2.0.2
 - increase favicon padding to ensure favicons are correctly sized
 
