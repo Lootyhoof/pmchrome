@@ -234,7 +234,7 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
   min-height: 18px;
 }
 
-#downloads-indicator-icon:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
                               0, 108, 18, 90) center no-repeat;
 }
@@ -247,7 +247,7 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
   background: url("chrome://browser/skin/downloads/favicon_downloads.png") no-repeat center;
 }
 
-#downloads-indicator:-moz-lwtheme-brighttext:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
+toolbar[brighttext] #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
 #TabsToolbar #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background: url("chrome://browser/skin/downloads/favicon_downloads2.png") no-repeat center !important;
 }
@@ -316,15 +316,10 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
   }
 }
 
-@media (-moz-os-version: windows-xp),
-       (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  #TabsToolbar[tabsontop=true] > #downloads-indicator-counter,
-  #downloads-indicator-counter:-moz-lwtheme-brighttext {
-    color: white;
-    text-shadow: 0 0 1px rgba(0,0,0,.7),
-                 0 1px 1.5px rgba(0,0,0,.5);
-  }
+toolbar[brighttext] #downloads-indicator-counter {
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,.7),
+               0 1px 1.5px rgba(0,0,0,.5);
 }
 
 #downloads-indicator-progress {
@@ -381,8 +376,6 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
    button icon). */
 #toolbar-menubar #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon:not(:-moz-lwtheme),
 #TabsToolbar[tabsontop=true] #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon:not(:-moz-lwtheme),
-#navigator-toolbox[tabsontop=false] > #nav-bar #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon:not(:-moz-lwtheme),
-#nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon:not(:-moz-lwtheme),
 
 /* The following rules are for the downloads indicator when in its paused
      or undetermined progress state. We use :not([counter]) as a shortcut for
@@ -391,21 +384,8 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
 /* This is the case where the downloads indicator has been moved next to the menubar */
 #toolbar-menubar #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
 /* This is the case where the downloads indicator is in the tabstrip toolbar with tabs on top. */
-#TabsToolbar[tabsontop=true] #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
-/* This is the case where the downloads indicator is anywhere in the nav-bar with tabs on bottom. */
-#navigator-toolbox[tabsontop=false] > #nav-bar #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
-/* This is the case where the downloads indicator is in the tabstrip when the tabstrip is the last item in the toolbox (and is therefore over glass) */
-#nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+#TabsToolbar[tabsontop=true] #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90);
-}
-
-#toolbar-menubar #downloads-indicator-counter:not(:-moz-lwtheme),
-#TabsToolbar[tabsontop=true] #downloads-indicator-counter:not(:-moz-lwtheme),
-#navigator-toolbox[tabsontop=false] > #nav-bar #downloads-indicator-counter:not(:-moz-lwtheme),
-#nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #downloads-indicator-counter:not(:-moz-lwtheme) {
-  color: white;
-  text-shadow: 0 0 1px rgba(0,0,0,.7),
-               0 1px 1.5px rgba(0,0,0,.5);
 }
 
 #downloads-indicator-counter {

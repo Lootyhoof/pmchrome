@@ -803,7 +803,7 @@ menuitem.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-.toolbarbutton-1:-moz-lwtheme-brighttext {
+toolbar[brighttext] .toolbarbutton-1 {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -998,7 +998,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar) #reload-button[disabled=true]:no
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-#home-button.bookmark-item:-moz-lwtheme-brighttext {
+toolbar[brighttext] #home-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -1030,7 +1030,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar) #reload-button[disabled=true]:no
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-#bookmarks-menu-button.bookmark-item:-moz-lwtheme-brighttext {
+toolbar[brighttext] #bookmarks-menu-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -1099,7 +1099,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar) #reload-button[disabled=true]:no
 
 #TabsToolbar > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 #TabsToolbar > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-#tabview-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #tabview-button {
   list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
 }
 
@@ -2025,8 +2025,8 @@ window[sizemode="maximized"] #navigator-toolbox {
   position: relative;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
-.tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext {
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up,
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png);
 }
 
@@ -2102,7 +2102,7 @@ window[sizemode="maximized"] #navigator-toolbox {
   -moz-image-region: rect(0px, 16px, 18px, 0px) !important;
 }
 
-#new-tab-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
 }
 
@@ -2111,7 +2111,7 @@ window[sizemode="maximized"] #navigator-toolbox {
   list-style-image: url("chrome://browser/skin/tabbrowser/mainwindow-dropdown-arrow.png");
 }
 
-#alltabs-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #alltabs-button {
   list-style-image: url("chrome://browser/skin/tabbrowser/mainwindow-dropdown-arrow-inverted.png");
 }
 
