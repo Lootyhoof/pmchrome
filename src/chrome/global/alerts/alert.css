@@ -80,9 +80,7 @@ label {
 }
 
 .alertCloseButton {
-  list-style-image: url("chrome://global/skin/icons/close2.png");
   -moz-appearance: none;
-  -moz-image-region: rect(0, 16px, 16px, 0);
   padding: 0;
   margin: 6px;
   border: none !important;
@@ -90,12 +88,4 @@ label {
 
 .alertCloseButton > .toolbarbutton-text {
   display: none;
-}
-
-.alertCloseButton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.alertCloseButton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }

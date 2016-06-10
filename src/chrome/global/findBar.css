@@ -5,20 +5,10 @@
   -moz-margin-start: 7px;
   -moz-margin-end: 7px;
   -moz-appearance: none;
-  list-style-image: url(chrome://browser/skin/tabbrowser/tab_close.png);
-  -moz-image-region: rect(0, 18px, 18px, 0);
   border: none !important;
   box-shadow: none !important;
   background: none !important;
   -moz-border-image: none !important;
-}
-
-.findbar-closebutton:hover {
-  -moz-image-region: rect(0, 36px, 18px, 18px);
-}
-
-.findbar-closebutton:hover:active {
-  -moz-image-region: rect(0, 54px, 18px, 36px);
 }
 
 findbar {
