@@ -588,7 +588,7 @@
 #menu_bookmarkThisPage,
 #BMB_bookmarkThisPage {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
-  -moz-image-region: rect(0 16px 16px 0);
+  -moz-image-region: rect(0 19px 19px 0);
 }
 
 #appmenu_showAllHistory,

@@ -2,13 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
 /* ===== autocomplete.css =================================================
   == Styles used by the autocomplete widget.
   ======================================================================= */
+
+@import url("chrome://os/skin/autocomplete.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
@@ -30,7 +28,7 @@ textbox[nomatch="true"][highlightnonmatches="true"] {
 }
 
 textbox:not(.padded) .textbox-input-box {
-  margin: 0 2px;
+  margin: 0 3px;
 }
 
 .textbox-input-box {
@@ -38,32 +36,9 @@ textbox:not(.padded) .textbox-input-box {
 }
 
 /* ::::: autocomplete popups ::::: */
-panel[type="autocomplete-richlistbox"]::after,
-.autocomplete-history-popup::after {
-  content: '';
-  display: block;
-  background-image:
-    url(chrome://global/skin/icons/shadow.png);
-}
 
-panel[type="autocomplete-richlistbox"],
 .autocomplete-history-popup {
-  -moz-appearance: none;
-  padding: 0;
-  margin-top: 3px !important;
-  -moz-window-shadow: none;
-  border-style: solid;
-  border-width: 3px 4px 7px 4px;
-  border-image: url("chrome://global/skin/icons/shadow.png") 3 4 7 4 fill repeat stretch;
-  background-color: transparent;
-}
-
-panel[type="autocomplete"] {
-  -moz-appearance: none;
-  border: 1px solid #7F9DB9;
-  padding: 0px;
-  min-width: 0px;
-  background-color: -moz-Field;
+  max-height: 180px;
 }
 
 /* ::::: tree ::::: */
@@ -81,10 +56,6 @@ panel[type="autocomplete"] {
   padding: 0 !important;
 }
 
-panel[type="autocomplete-richlistbox"] .tree-rows {
-  margin: 0 -1px !important;
-}
-
 /* GTK calculates space for a sort arrow */
 .autocomplete-treecol > .treecol-sortdirection {
   -moz-appearance: none !important;
@@ -94,90 +65,20 @@ panel[type="autocomplete-richlistbox"] .tree-rows {
   -moz-padding-start: 8px;
 }
 
+treechildren.autocomplete-treebody::-moz-tree-row(selected) {
+ background-color: Highlight;
+}
+
+treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
+  color: HighlightText !important;
+}
+
 .autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue) {
   max-width: 16px;
   height: 16px;
 }
 
 /* ::::: richlistbox autocomplete ::::: */
-
-.autocomplete-richlistbox richlistitem {
-  transition: 0ms background-color;
-}
-
-.autocomplete-richlistbox {
-  -moz-appearance: none;
-  border: 0px solid transparent;
-  border-radius: 3px;
-  margin: -2px;
-  background-color: transparent !important;
-}
-
-.autocomplete-richlistitem {
-  margin: 0;
-  border-top: 0px solid transparent;
-  background-color: rgb(252,252,252);
-}
-
-.autocomplete-richlistitem[selected="true"] {
-  background-color: #F1F7FD;
-}
-
-.autocomplete-richlistitem:hover:active {
-  background-color: #CAE2F9;
-}
-
-.ac-site-icon {
-  width: 16px; 
-  height: 16px;
-  -moz-margin-start: 4px;
-  -moz-margin-end: 4px;
-  margin-bottom: -2px;
-}
-
-.ac-type-icon {
-  width: 16px; 
-  height: 16px;
-}
-
-.ac-extra > .ac-result-type-tag {
-  margin: 0 4px;
-}
-
-.ac-extra > .ac-comment {
-  padding-right: 4px;
-}
-
-.ac-ellipsis-after {
-  margin: 0;
-  padding: 0; 
-}
-
-.ac-normal-text {
-  margin: 0 !important;
-  padding: 0;
-}
-
-.ac-normal-text > html|span {
-  margin: 0;
-  padding: 0;
-}
-
-.ac-comment html|span.ac-emphasize-text {
-  box-shadow: inset 0 0 1px 1px rgba(208,208,208,0.5);
-  background-color: rgba(208,208,208,0.3);
-  border-radius: 2px;
-  color: #000000;
-}
-
-.ac-url-text > html|span.ac-emphasize-text,
-.ac-action-text > html|span.ac-emphasize-text {
-  font-weight: bold;
-}
-
-.ac-title, .ac-url {
-  overflow: hidden;
-}
 
 /* ::::: textboxes inside toolbarpaletteitems ::::: */
 
@@ -188,4 +89,3 @@ toolbarpaletteitem > toolbaritem > textbox > hbox > hbox > html|*.textbox-input 
 toolbarpaletteitem > toolbaritem > * > textbox > hbox > hbox > html|*.textbox-input {
   visibility: hidden;
 }
-
