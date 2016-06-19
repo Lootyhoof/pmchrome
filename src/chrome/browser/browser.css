@@ -3969,8 +3969,7 @@ chatbox {
   }
 
   @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7),
-         (-moz-os-version: windows-win8) {
+         (-moz-os-version: windows-win7) {
     #toolbar-menubar:not(:-moz-lwtheme),
     #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
 	  text-shadow: 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4) !important;
