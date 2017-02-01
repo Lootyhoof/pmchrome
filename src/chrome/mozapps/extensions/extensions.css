@@ -204,7 +204,6 @@
   color: #999999;
   min-height: 17px;
   padding: 2px 0 3px 12px;
-  text-transform: uppercase;
   background-color: transparent;
   overflow: hidden;
 }
@@ -319,7 +318,7 @@
 }
 
 #header-utils-btn {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities2.png");
   -moz-margin-end: 8px;
 }
 
