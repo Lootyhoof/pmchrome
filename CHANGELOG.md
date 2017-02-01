@@ -1,6 +1,16 @@
 # Changelog
 
-### 1.5.0
+### 3.0.0
+- improve menubar appearance on Linux
+- add inverted hamburger appmenu icon on Linux
+- improve appearance of inverted toolbar icons
+- use hamburger on about:addons
+- about:addons categories should not be in uppercase
+- fix padding of caption buttons on Windows 10 in personas mode
+- sync devtools styling with default
+- cleanup of redundant styling
+
+### 2.4.0
 - support PM27's devtools
 - drop PM26 support
 
