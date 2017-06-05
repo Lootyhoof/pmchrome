@@ -1,5 +1,12 @@
 # Changelog
 
+### 3.1.0
+- sync about:support styling with default
+- sync about:permissions styling with default
+- add image document favicon when viewing standalone images
+- fix "learn more" links in notification popups
+- allow extensions to style their own toolbarbutton-badge
+
 ### 3.0.0
 - improve menubar appearance on Linux
 - add inverted hamburger appmenu icon on Linux
