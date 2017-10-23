@@ -4,6 +4,7 @@ skin mozapps      PMChrome chrome/mozapps/
 skin global      PMChrome chrome/global/  
 skin os          PMChrome chrome/os/winnt/ os=WINNT
 skin os          PMChrome chrome/os/linux/ os=Linux
+skin os          PMChrome chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/appmenu-icon.png chrome://browser/skin/appmenu-icon-flat.png os=WINNT osversion>=6.2
 override chrome://browser/skin/pb-icon.png chrome://browser/skin/pb-icon-flat.png os=WINNT osversion>=6.2
