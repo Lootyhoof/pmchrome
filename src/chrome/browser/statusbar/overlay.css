@@ -89,11 +89,19 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
 }
 
 #status4evar-download-button #status4evar-download-icon {
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
+	background: -moz-image-rect(var(--toolbarbutton-image), 0, 108, 18, 90) center no-repeat;
 }
 
 toolbar[brighttext] #status4evar-download-button #status4evar-download-icon {
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
+	background: -moz-image-rect(var(--toolbarbutton-inverted-image), 0, 108, 18, 90) center no-repeat;
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  #toolbar-menubar #status4evar-download-button #status4evar-download-icon:not(:-moz-lwtheme),
+  #TabsToolbar[tabsontop=true] #status4evar-download-button #status4evar-download-icon:not(:-moz-lwtheme) {
+    background: -moz-image-rect(var(--toolbarbutton-inverted-image), 0, 108, 18, 90) center no-repeat;
+  }
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon {
