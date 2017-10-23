@@ -39,8 +39,14 @@
   --window-text-color: currentColor;
 }
 
-#main-window[tabsontop="true"]:after {
+#main-window[tabsontop="true"]::after {
   display: none !important;
+}
+
+@media not all and (-moz-os-version: windows-win8) {
+  #main-window::after {
+    margin-left: -60px !important;
+  }
 }
 
 /* Pale Moon feed icon */
