@@ -28,6 +28,9 @@
   --nav-bar-bg-stop2: #EEEFEE;
   --nav-bar-bg-stop3: #E4E4E4;
   --nav-bar-tot-box-shadow: 0px 1px 0 0 #F9F9F9 inset, 1px 0 0 0 #DFDFDF inset, -1px 0 0 0 #DFDFDF inset;
+  
+  --tab-bar-inner-border: rgba(0,0,0,.28);
+  --tab-bar-outer-border: rgba(0,0,0,.075);
 
   --toolbar-box-shadow: 1px 0 0 0 #DFDFDF inset, -1px 0 0 0 #DFDFDF inset;
   --toolbar-highlight-top: rgba(250,250,250,1);
@@ -37,6 +40,12 @@
   --toolbarbutton-inverted-image: url("chrome://browser/skin/Toolbar-inverted.png");
   
   --window-text-color: currentColor;
+}
+
+:root:-moz-lwtheme-brighttext {
+  --tab-bar-inner-border: rgb(105,101,96);
+  --tab-bar-outer-border: rgba(255,255,255,.075);
+  --toolbar-highlight-top: rgb(0, 0, 0);
 }
 
 /* Pale Moon feed icon */
@@ -1550,6 +1559,16 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tabbrowser-tab > .tab-stack > .tab-content[selected="true"] {
   -moz-border-image: url("chrome://browser/skin/tabbrowser/tab_active.png") 2 15 fill repeat stretch;
+}
+
+.tabbrowser-tab:-moz-lwtheme-brighttext > * > .tab-content,
+.tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-icon-image,
+.tabs-newtab-button:-moz-lwtheme-brighttext {
+  filter: invert(1);
+}
+
+#tabbrowser-tabs[tabsontop=false]:-moz-lwtheme-brighttext {
+  margin-bottom: 1px;
 }
 
 /* preloading hack */
@@ -3233,7 +3252,7 @@ html|*#gcli-output-frame {
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar {
   border-top: 2px solid;
-  -moz-border-top-colors: rgba(0,0,0,.075) rgba(0,0,0,.28);
+  -moz-border-top-colors: var(--tab-bar-outer-border) var(--tab-bar-inner-border);
   background-clip: padding-box;
 }
 
