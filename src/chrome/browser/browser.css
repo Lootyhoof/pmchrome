@@ -133,7 +133,7 @@
 #main-window[tabsontop=true][disablechrome] #navigator-toolbox::after {
   visibility: visible !important;
   border-top: 2px solid !important;
-  -moz-border-top-colors: rgba(0,0,0,.075) rgba(0,0,0,.28) !important;
+  -moz-border-top-colors: var(--tab-bar-outer-border) var(--tab-bar-inner-border) !important;
   background-clip: padding-box !important;
   height: 4px !important;
   background-image: linear-gradient(#F9F9F9, #F9F9F9, #F8F8F8) !important;
