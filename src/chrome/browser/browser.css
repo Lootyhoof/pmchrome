@@ -3240,7 +3240,8 @@ html|*#gcli-output-frame {
   /* Toolbar shadow behind tabs */
   /* This code is only needed for restored windows (i.e. sizemode=normal)
      because of the border radius on the toolbar below the tab bar. */
-#main-window #nav-bar,
+#main-window[tabsontop="true"] #nav-bar,
+#main-window[tabsontop="false"] #nav-bar:not(:-moz-lwtheme),
 #main-window > #nav-bar[collapsed=true]:not([customizing]) + toolbar,
 #main-window > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] ~ #PersonalToolbar,
