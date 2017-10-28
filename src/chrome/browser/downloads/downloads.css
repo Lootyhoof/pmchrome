@@ -248,8 +248,7 @@ toolbar[brighttext] #downloads-indicator-icon {
                               0, 108, 18, 90) center no-repeat;
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-windows-glass) {
   #toolbar-menubar #downloads-indicator-icon:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true] #downloads-indicator-icon:not(:-moz-lwtheme) {
     background: -moz-image-rect(var(--toolbarbutton-inverted-image),
