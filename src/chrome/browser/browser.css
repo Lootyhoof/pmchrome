@@ -1556,6 +1556,7 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > .tab-content,
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-icon-image,
+.tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-text,
 .tabs-newtab-button:-moz-lwtheme-brighttext {
   filter: invert(1);
 }
