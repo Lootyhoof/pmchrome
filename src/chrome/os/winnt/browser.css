@@ -185,6 +185,78 @@
   display: none;
 }
 
+#appmenu-popup {
+  -moz-appearance: none;
+  border-style: solid;
+  border-width: 3px 4px 7px 4px;
+  border-image: url("chrome://global/skin/icons/shadow.png") 3 4 7 4 fill repeat stretch;
+  background-color: transparent;
+}
+
+#appmenu-popup > .popup-internal-box {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  margin: -2px;
+  padding: 1px;
+}
+
+#appmenu-popup .menu-accel,
+#appmenu-popup .menu-iconic-accel {
+  -moz-margin-start: 1.7em !important;
+  -moz-margin-end: 2em !important;
+}
+
+@media not all and (-moz-windows-compositor) {
+  #appmenu-popup .menu-accel,
+  #appmenu-popup .menu-iconic-accel {
+    -moz-margin-start: 1.7em !important;
+    -moz-margin-end: 3em !important;
+  }
+}
+
+#appmenu-editmenu,
+#appmenuPrimaryPane > menu,
+#appmenuPrimaryPane > menuitem,
+#appmenuPrimaryPane > splitmenu > .splitmenu-menuitem,
+#appmenuPrimaryPane > splitmenu > .splitmenu-menu,
+#appmenuSecondaryPane > menu,
+#appmenuSecondaryPane > menuitem,
+#appmenuSecondaryPane > splitmenu > .splitmenu-menuitem,
+#appmenuSecondaryPane > splitmenu > .splitmenu-menu {
+  -moz-appearance: none;
+  height: 23px;
+}
+
+#appmenuPrimaryPane > menu[_moz-menuactive="true"],
+#appmenuPrimaryPane > menuitem[_moz-menuactive="true"],
+#appmenuPrimaryPane > splitmenu > .splitmenu-menuitem[_moz-menuactive],
+#appmenuPrimaryPane > splitmenu > .splitmenu-menu[_moz-menuactive],
+#appmenuSecondaryPane > menu[_moz-menuactive="true"],
+#appmenuSecondaryPane > menuitem[_moz-menuactive="true"],
+#appmenuSecondaryPane > splitmenu > .splitmenu-menuitem[_moz-menuactive],
+#appmenuSecondaryPane > splitmenu > .splitmenu-menu[_moz-menuactive] {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, .06);
+  color: inherit;
+}
+
+#appmenuSecondaryPane {
+  background-color: #F0F0F0;
+  box-shadow: 1px 0 0 rgb(232, 232, 232) inset;
+  -moz-padding-start: 1px;
+  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+
+#appmenu-popup menu[_moz-menuactive="true"],
+#appmenu-popup menuitem[_moz-menuactive="true"],
+.splitmenu-menuitem[_moz-menuactive="true"],
+.splitmenu-menuitem[_moz-menuactive],
+.splitmenu-menu[_moz-menuactive] {
+  background-color: transparent;
+  background: rgba(0, 0, 0, .06) !important;
+  border-color: transparent!important;
+}
+
 /* ::::: titlebar ::::: */
 
 @media (-moz-windows-compositor) {
