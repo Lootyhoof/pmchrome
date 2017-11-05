@@ -1,5 +1,19 @@
 # Changelog
 
+### 4.0.0
+- improve cross-platform styling
+- fix statusbar progressmeter
+- add dark persona styling
+- add basic OS X support
+- preserve add-on bar close button in text mode
+- draw a background on Win10 for better accent color detection
+- improve persona styling
+- sync devtools styling with default
+- Windows: fix window title position
+- Linux: style menubar in personas
+- Linux: add private browsing indicator
+- major cleanup
+
 ### 3.1.0
 - sync about:support styling with default
 - sync about:permissions styling with default
