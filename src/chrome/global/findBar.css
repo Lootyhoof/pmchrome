@@ -104,6 +104,11 @@ findbar:not(:-moz-lwtheme) {
   -moz-image-region: rect(64px 48px 80px 32px);
 }
 
+.findbar-highlight:-moz-lwtheme {
+  color: inherit;
+  box-shadow: inherit;
+}
+
 .find-status-icon {
   list-style-image: none;
   margin-top: 2px;
