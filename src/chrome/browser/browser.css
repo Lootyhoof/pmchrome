@@ -1144,16 +1144,13 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   color: #009933;
 }
 
-.autocomplete-richlistitem:hover:active .ac-comment,
-.private-autocomplete-richlistitem:hover:active .ac-comment {
-  color: #161D22;
-}
-
 .autocomplete-richlistitem[selected="true"] .ac-url-text,
 .autocomplete-richlistitem[selected="true"] .ac-action-text,
+.autocomplete-richlistitem[selected="true"] .ac-comment,
 .private-autocomplete-richlistitem[selected="true"] .ac-url-text,
-.private-autocomplete-richlistitem[selected="true"] .ac-action-text {
-  color: #006622;
+.private-autocomplete-richlistitem[selected="true"] .ac-action-text,
+.private-autocomplete-richlistitem[selected="true"] .ac-comment {
+  color: #ffffff;
 }
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
