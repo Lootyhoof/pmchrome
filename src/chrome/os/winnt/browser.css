@@ -733,6 +733,10 @@
     border-right-style: none !important;
   }
   
+  #main-menubar > menu:not(:-moz-lwtheme) {
+    color: inherit;
+  }
+  
   #toolbar-menubar:not([autohide="true"]) {
     margin-bottom: 0px !important;
   }
