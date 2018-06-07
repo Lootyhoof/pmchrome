@@ -36,6 +36,11 @@ textbox:not(.padded) .textbox-input-box {
   -moz-box-align: center;
 }
 
+.autocomplete-richlistitem,
+.private-autocomplete-richlistitem {
+  transition: none;
+}
+
 /* ::::: autocomplete popups ::::: */
 
 .autocomplete-history-popup,
