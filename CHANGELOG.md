@@ -1,5 +1,10 @@
 # Changelog
 
+### 4.1.0
+- add initial Pale Moon 28 support
+- don't use background image on standalone image viewer
+- fix toolbar text color on Win8/10 in tab bar/"glass" toolbars
+
 ### 4.0.1
 - improve findbar persona styling
 - Linux: improve menubar styling
