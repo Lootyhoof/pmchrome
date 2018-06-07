@@ -1108,7 +1108,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
   -moz-image-region: rect(0, 38px, 19px, 19px);
   -moz-margin-start: 3px;
@@ -1119,14 +1120,16 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-keyword,
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
   list-style-image: url(chrome://global/skin/icons/search_box_icon.png);
   width: 19px; 
   height: 19px;
 }
 
 .ac-result-type-tag,
-.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/tag.png");
   width: 16px; 
   height: 16px;
