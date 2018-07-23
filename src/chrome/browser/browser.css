@@ -1342,6 +1342,12 @@ toolbarseparator {
   margin: 1px !important;
 }
 
+.browserContainer > findbar {
+  background-color: transparent;
+  color: #000;
+  text-shadow: none;
+}
+
 /* ::::: throbber ::::: */
 
 #navigator-throbber {
