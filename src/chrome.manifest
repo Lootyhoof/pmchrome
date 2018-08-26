@@ -7,7 +7,6 @@ skin os          PMChrome chrome/os/linux/ os=Linux
 skin os          PMChrome chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
-override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
 
 override chrome://browser/skin/appmenu-icon.png chrome://browser/skin/appmenu-icon-flat.png os=WINNT osversion>=6.2
 override chrome://browser/skin/pb-icon.png chrome://browser/skin/pb-icon-flat.png os=WINNT osversion>=6.2
