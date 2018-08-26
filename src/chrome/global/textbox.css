@@ -20,7 +20,7 @@ textbox {
   cursor: text;
   margin: 2px 4px;
   padding: 2px 2px 3px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   background-color: -moz-Field;
   color: -moz-FieldText;
   border: 1px solid #BFBFBF;
@@ -81,8 +81,8 @@ textbox[type="search"] > .textbox-input-box {
 textbox[type="search"],
 textbox[type="search"]:not([disabled="true"])[focused] {
   -moz-appearance: none;
-  -moz-padding-end: 5px;
-  -moz-padding-start: 34px;
+  padding-inline-end: 5px;
+  padding-inline-start: 34px;
   border: 1px solid transparent;
   background-color: transparent;
   background-image: url("chrome://global/skin/icons/Search-glass.png");

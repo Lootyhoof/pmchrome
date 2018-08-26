@@ -2,8 +2,8 @@
 
 .findbar-closebutton {
   padding: 0;
-  -moz-margin-start: 7px;
-  -moz-margin-end: 7px;
+  margin-inline-start: 7px;
+  margin-inline-end: 7px;
   -moz-appearance: none;
   border: none !important;
   box-shadow: none !important;
@@ -45,7 +45,7 @@ findbar:not(:-moz-lwtheme) {
   -moz-appearance: none !important;
   border: 0 !important;
   padding: 0 !important;
-  -moz-margin-start: -4px !important;
+  margin-inline-start: -4px !important;
   list-style-image: url("chrome://global/skin/icons/find_Prev_normal.png") !important;
   -moz-image-region: rect(0 28px 27px 0) !important;
 }
@@ -68,7 +68,7 @@ findbar:not(:-moz-lwtheme) {
   -moz-appearance: none !important;
   border: 0 !important;
   padding: 0 !important;
-  -moz-margin-start: -2px !important;
+  margin-inline-start: -2px !important;
   list-style-image: url("chrome://global/skin/icons/find_next_normal.png") !important;
   -moz-image-region: rect(0 28px 27px 0) !important;
 }
@@ -113,15 +113,15 @@ findbar:not(:-moz-lwtheme) {
   list-style-image: none;
   margin-top: 2px;
   margin-bottom: 0px;
-  -moz-margin-start: 12px;
-  -moz-margin-end: 0px;
+  margin-inline-start: 12px;
+  margin-inline-end: 0px;
   width: 16px;
   height: 16px;
 }
 
 .findbar-find-status {
   margin: 0 !important;
-  -moz-margin-start: 3px !important;
+  margin-inline-start: 3px !important;
   padding: 2px !important;
 }
 

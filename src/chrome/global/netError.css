@@ -30,7 +30,7 @@ body {
 
 ul, ol {
   margin: 0;
-  -moz-margin-start: 40px;
+  margin-inline-start: 40px;
   padding: 0;
 }
 
@@ -151,7 +151,7 @@ button:active {
 }
 
 :root.blacklist #errorLongContent {
-  -moz-padding-end: 220px;
+  padding-inline-end: 220px;
 }
 
 #ignoreWarning {

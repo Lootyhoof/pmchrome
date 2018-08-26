@@ -206,8 +206,8 @@
 
 #nav-bar {
   min-height: 36px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 4px;
+  padding-inline-end: 4px;
 }
 
 #print-preview-toolbar:not(:-moz-lwtheme) {
@@ -223,7 +223,7 @@
 /* ::::: app menu button ::::: */
 
 .splitmenu-menuitem {
-  -moz-padding-end: 0.5em;
+  padding-inline-end: 0.5em;
 }
 
 .splitmenu-menu {
@@ -370,8 +370,8 @@
 
 #PersonalToolbar .toolbarbutton-1,
 #PersonalToolbar toolbarbutton {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 1px;
+  padding-inline-start: 2px;
+  padding-inline-end: 1px;
 }
 
 #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon,
@@ -392,7 +392,7 @@ toolbar menupopup {
 }
 
 #appmenu-popup menupopup {
-  -moz-margin-start: -3px;
+  margin-inline-start: -3px;
 }
 
 #nav-bar > #personal-bookmarks {
@@ -403,12 +403,12 @@ toolbar menupopup {
 /* Prevent [mode=icons] from hiding the label */
 
 .bookmark-item > .toolbarbutton-icon {
-  -moz-margin-end: 0px !important;
+  margin-inline-end: 0px !important;
 }
 
 .bookmark-item > .toolbarbutton-icon[label]:not([label=""]),
 .bookmark-item > .toolbarbutton-icon[type="menu"] {
-  -moz-margin-end: 5px !important;
+  margin-inline-end: 5px !important;
 }
 
 .bookmark-item > .toolbarbutton-text {
@@ -452,7 +452,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item > .menu-iconic-left > .menu-iconic-icon {
-  -moz-padding-start: 0px;
+  padding-inline-start: 0px;
 }
 
 /* ::::: bookmark items ::::: */
@@ -570,8 +570,8 @@ toolbarbutton {
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(#addon-bar) {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar):not(#addon-bar) .toolbarbutton-1 {
@@ -590,8 +590,8 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar):not(#addon
 toolbar[mode="text"] toolbarbutton .toolbarbutton-text {
   margin-top: 0px!important;
   margin-bottom: 0px!important;
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 2px !important;
 }
 
 .toolbarbutton-1 > .toolbarbutton-menubutton-button,
@@ -618,7 +618,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar):not(#addon
 
 .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 .toolbarbutton-1 > .toolbarbutton-icon {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 toolbar[mode=full] .toolbarbutton-1,
@@ -629,10 +629,10 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox > toolbar:not(#TabsToolbar) toolbarbutton[type="menu-button"] > .toolbarbutton-menubutton-button {
   margin-top: -5px !important;
   margin-bottom: -5px !important;
-  -moz-margin-start: -5px !important;
-  -moz-margin-end: 0 !important;
-  -moz-padding-start: 6px !important;
-  -moz-padding-end: 2px !important;
+  margin-inline-start: -5px !important;
+  margin-inline-end: 0 !important;
+  padding-inline-start: 6px !important;
+  padding-inline-end: 2px !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
@@ -640,10 +640,10 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox > toolbar:not(#TabsToolbar) toolbarbutton[type="menu-button"] > .toolbarbutton-menubutton-dropmarker {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 0 !important;
-  -moz-padding-start: 1px !important;
-  -moz-padding-end: 1px !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  padding-inline-start: 1px !important;
+  padding-inline-end: 1px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -656,7 +656,7 @@ toolbar toolbarbutton[disabled=true] .toolbarbutton-text {
 
 #back-button {
   -moz-image-region: rect(0, 18px, 18px, 0);
-  -moz-padding-start: 1px !important;
+  padding-inline-start: 1px !important;
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar) #back-button[disabled=true]:not(:-moz-lwtheme) {
@@ -666,7 +666,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar) #back-button[disabled=true]:not(
 #forward-button,
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button > #forward-button {
   -moz-image-region: rect(0, 36px, 18px, 18px);
-  -moz-padding-start: 1px !important;
+  padding-inline-start: 1px !important;
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar) #forward-button[disabled=true]:not(:-moz-lwtheme) {
@@ -689,7 +689,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 #stop-button {
   -moz-image-region: rect(0, 54px, 18px, 36px);
-  -moz-padding-start: 1px !important;
+  padding-inline-start: 1px !important;
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar) #stop-button[disabled=true]:not(:-moz-lwtheme) {
@@ -698,7 +698,7 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar) #stop-button[disabled=true]:not(
 
 #reload-button {
   -moz-image-region: rect(0, 72px, 18px, 54px);
-  -moz-padding-start: 1px !important;
+  padding-inline-start: 1px !important;
 }
 
 toolbar:not(#toolbar-menubar):not(#TabsToolbar) #reload-button[disabled=true]:not(:-moz-lwtheme) {
@@ -720,7 +720,7 @@ toolbar[brighttext] #home-button.bookmark-item {
 
 #home-button {
   -moz-image-region: rect(0, 90px, 18px, 72px);
-  -moz-padding-start: 1px !important;
+  padding-inline-start: 1px !important;
 }
 
 #downloads-button {
@@ -929,7 +929,7 @@ toolbar[brighttext] .toolbarbutton-menubutton-dropmarker {
 
 #urlbar {
   width: 7em;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 
 #TabsToolbar #urlbar:not([focused="true"]),
@@ -943,8 +943,8 @@ toolbar[brighttext] .toolbarbutton-menubutton-dropmarker {
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
-  -moz-padding-start: 24px !important;
-  -moz-margin-start: -24px !important;
+  padding-inline-start: 24px !important;
+  margin-inline-start: -24px !important;
   position: relative;
   pointer-events: none;
 }
@@ -983,14 +983,14 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar-search-splitter {
   min-width: 4px;
-  -moz-margin-start: -3px;
+  margin-inline-start: -3px;
   border-style: none !important;
   background:  transparent !important;
 }
 
 #urlbar-search-splitter + #urlbar-container > #urlbar ,
 #urlbar-search-splitter + #search-container > #searchbar > .searchbar-textbox {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #urlbar-display-box {
@@ -999,7 +999,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar-display {
   margin: 0;
-  -moz-margin-start: 2px;
+  margin-inline-start: 2px;
   color: #7F7F7F;
 }
 
@@ -1017,12 +1017,12 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   margin-bottom: 1px;
   border: 1px solid transparent;
   border-radius: 1.8px;
-  -moz-margin-start: 1px;
+  margin-inline-start: 1px;
 }
 
 #identity-box.verifiedDomain #identity-icon-labels {
-  -moz-margin-start: 4px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 4px;
+  margin-inline-end: 1px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
@@ -1040,14 +1040,14 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 #identity-box.verifiedIdentity #identity-icon-labels {
-  -moz-margin-start: 4px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 4px;
+  margin-inline-end: 1px;
   color: #079500;
 }
 
 #identity-box.verifiedDomain #identity-icon-labels {
-  -moz-margin-start: 4px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 4px;
+  margin-inline-end: 1px;
   color: #0568C4;
 }
 
@@ -1057,8 +1057,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 #identity-icon-labels {
-  -moz-margin-start: 1px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 1px;
+  margin-inline-end: 3px;
 }
 
 /* Location bar dropmarker */
@@ -1087,8 +1087,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 #page-proxy-favicon {
   width: 19px;
   height: 19px;
-  -moz-margin-start: -2px;
-  -moz-margin-end: -1px;
+  margin-inline-start: -2px;
+  margin-inline-end: -1px;
   list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
   -moz-image-region: rect(0, 19px, 19px, 0);
 }
@@ -1112,8 +1112,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 .private-autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
   -moz-image-region: rect(0, 38px, 19px, 19px);
-  -moz-margin-start: 3px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 3px;
+  margin-inline-end: 3px;
   width: 19px; 
   height: 19px;
   margin-bottom: -3px;
@@ -1133,7 +1133,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   list-style-image: url("chrome://browser/skin/places/tag.png");
   width: 16px; 
   height: 16px;
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 .ac-comment {
@@ -1308,14 +1308,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 .panel-promo-icon {
   list-style-image: url("chrome://browser/skin/sync-notification-24.png");
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
   vertical-align: middle;
 }
 
 .panel-promo-closebutton {
   -moz-appearance: none;
   border: none;
-  -moz-margin-end: -8px;
+  margin-inline-end: -8px;
   margin-top: -1px;
 }
 
@@ -1331,7 +1331,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #sidebar-title {
-  -moz-padding-start: 0px;
+  padding-inline-start: 0px;
 }
 
 toolbarseparator {
@@ -1371,8 +1371,8 @@ toolbarseparator {
   -moz-appearance: none;
   min-height: 27px;
   padding: 0;
-  -moz-padding-start: 2px !important;
-  -moz-padding-end: 2px !important;
+  padding-inline-start: 2px !important;
+  padding-inline-end: 2px !important;
 }
 
 #navigator-toolbox[tabsontop=true] > #TabsToolbar {
@@ -1380,8 +1380,8 @@ toolbarseparator {
 }
 
 window[sizemode="maximized"] #navigator-toolbox {
-  -moz-margin-start: -1px !important;
-  -moz-margin-end: -1px !important;
+  margin-inline-start: -1px !important;
+  margin-inline-end: -1px !important;
 }
 
 :-moz-any(#TabsToolbar, #addon-bar) .toolbarbutton-1,
@@ -1457,15 +1457,15 @@ window[sizemode="maximized"] #navigator-toolbox {
 }
 
 .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
-  -moz-padding-start: 0px;
-  -moz-padding-end: 18px;
+  padding-inline-start: 0px;
+  padding-inline-end: 18px;
 }
 
 .tab-content {
   border: solid transparent;
   border-width: 2px 15px;
-  -moz-margin-start: 0;
-  -moz-margin-end: -14px;
+  margin-inline-start: 0;
+  margin-inline-end: -14px;
 }
 
 .tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab:not(:first-child) > .tab-stack > .tab-content:not([selected="true"]) {
@@ -1552,8 +1552,8 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tab-throbber,
 .tab-icon-image {
-  -moz-margin-start: 1px;
-  -moz-margin-end: 4px;
+  margin-inline-start: 1px;
+  margin-inline-end: 4px;
   margin-top: 0;
   width: 16px;
   height: 16px;
@@ -1570,8 +1570,8 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tab-throbber[pinned],
 .tab-icon-image[pinned] {
-  -moz-margin-start: 3px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 3px;
+  margin-inline-end: 3px;
 }
 
 .tabbrowser-tab:not([pinned]):not([busy]) .tab-icon-image:not([src]),
@@ -1581,7 +1581,7 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tabbrowser-tab:not([pinned]):not([busy]) .tab-icon-image:not([src]) ~ .tab-label,
 .tabbrowser-tab:not([pinned]):not([busy]) .tab-icon-image[src="chrome://browser/skin/Privacy-16.png#-moz-resolution=16,16"] ~ .tab-label {
-  -moz-margin-start: 5px !important;
+  margin-inline-start: 5px !important;
 }
 
 .tab-text:not([selected="true"]):not(:-moz-lwtheme) {
@@ -1604,7 +1604,7 @@ window[sizemode="maximized"] #navigator-toolbox {
   -moz-appearance: none;
   pointer-events: auto;
   margin-top: 0 !important;
-  -moz-margin-end: -3px !important;
+  margin-inline-end: -3px !important;
   border: none;
   padding: 0px !important; 
 }
@@ -1687,7 +1687,7 @@ toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
 .tabs-newtab-button {
   -moz-appearance: none; 
   border: 0 !important;
-  -moz-margin-start: 9px !important;
+  margin-inline-start: 9px !important;
   padding: 0 !important;
   background: transparent;
   list-style-image: url(chrome://browser/skin/tabbrowser/tab_new.png);
@@ -1709,8 +1709,8 @@ toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
 
 #new-tab-button {
   -moz-appearance: none; 
-  -moz-padding-start: 4px !important;
-  -moz-padding-end: 4px !important;
+  padding-inline-start: 4px !important;
+  padding-inline-end: 4px !important;
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png);
   -moz-image-region: rect(0px, 16px, 18px, 0px) !important;
 }
@@ -1783,9 +1783,9 @@ toolbar[brighttext] #alltabs-button {
 }
 
 .tabs-closebutton > .toolbarbutton-icon {
-  -moz-margin-end: 0px !important;
-  -moz-padding-end: 2px !important;
-  -moz-padding-start: 2px !important;
+  margin-inline-end: 0px !important;
+  padding-inline-end: 2px !important;
+  padding-inline-start: 2px !important;
 }
 
 toolbarbutton.chevron {
@@ -1815,7 +1815,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 #sidebar-throbber[loading="true"] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
 }
 
 /* Bookmarks toolbar */
@@ -1834,7 +1834,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 .menupopup-drop-indicator {
   list-style-image: none;
   height: 2px;
-  -moz-margin-end: -4em;
+  margin-inline-end: -4em;
   background-color: Highlight;
 }
 
@@ -1860,13 +1860,13 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 /* Popup Body Text */
 .identity-popup-description {
   white-space: pre-wrap;
-  -moz-padding-start: 15px;
+  padding-inline-start: 15px;
   margin: 2px 0 4px;
 }
 
 .identity-popup-label {
   white-space: pre-wrap;
-  -moz-padding-start: 15px;
+  padding-inline-start: 15px;
   margin: 0;
 }
 
@@ -1904,7 +1904,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption ,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption {
   margin-top: 10px;
-  -moz-margin-start: -24px;
+  margin-inline-start: -24px;
 }
 
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
@@ -1915,13 +1915,13 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #identity-popup-more-info-button {
   margin-top: 6px;
   margin-bottom: 0;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 .popup-notification-icon {
   width: 64px;
   height: 64px;
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
 }
 
 .popup-notification-icon[popupid="geolocation"] {
@@ -1988,8 +1988,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 .popup-progress-label,
 .popup-progress-meter {
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .popup-progress-label {
@@ -2001,7 +2001,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   margin: 0;
   min-height: 0;
   min-width: 0;
-  -moz-margin-start: -5px;
+  margin-inline-start: -5px;
   list-style-image: url("chrome://global/skin/icons/item_cancel.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
   border: none !important;
@@ -2057,7 +2057,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #notification-popup-box {
   margin: 0;
   min-width: 26px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 #notification-popup-box::after {
@@ -2075,7 +2075,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   width: 19px;
   height: 19px;
   margin: 0 2px;
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
 }
 
 .notification-anchor-icon:-moz-focusring {
@@ -2194,7 +2194,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 .tabbrowser-tab[label="about:config"]:not([pinned]):not([busy]):not([progress]) .tab-icon-image:not([src]) ~ .tab-label,
 .tabbrowser-tab[label="Options"]:not([pinned]):not([busy]):not([progress]) .tab-icon-image:not([src]) ~ .tab-label {
-  -moz-margin-start: 0px !important;
+  margin-inline-start: 0px !important;
 }
 
 /* Bookmarks roots menu-items */
@@ -2319,8 +2319,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #allTabs-filter {
-  -moz-margin-start: 24px;
-  -moz-margin-end: 0;
+  margin-inline-start: 24px;
+  margin-inline-end: 0;
 }
 
 #allTabs-tab-close-button > .toolbarbutton-icon {
@@ -2338,10 +2338,10 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   height: 22px;
   padding-top: 1px;
   padding-bottom: 5px;
-  -moz-padding-start: 1px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 1px;
+  padding-inline-end: 5px;
   margin-top: -2px;
-  -moz-margin-start: -2px;
+  margin-inline-start: -2px;
   border-bottom-right-radius: 4px;
 }
 
@@ -2402,8 +2402,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #addonbar-closebutton {
   border: none;
   padding: 0;
-  -moz-margin-start: 7px;
-  -moz-margin-end: 7px;
+  margin-inline-start: 7px;
+  margin-inline-end: 7px;
   -moz-appearance: none;
 }
 
@@ -2604,7 +2604,7 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
   -moz-appearance: none;
   color: inherit;
   border-width: 0;
-  -moz-border-end: 1px solid hsla(210,8%,5%,.45);
+  border-inline-end: 1px solid hsla(210,8%,5%,.45);
   box-shadow: -1px 0 0 hsla(210,16%,76%,.15) inset, 1px 0 0 hsla(210,16%,76%,.15);
 }
 
@@ -3051,7 +3051,7 @@ html|*#gcli-output-frame {
 }
 
 .center-item-label {
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   margin-bottom: 0;
   text-overflow: ellipsis;
 }
@@ -3061,7 +3061,7 @@ html|*#gcli-output-frame {
   background-repeat: no-repeat;
   width: 16px;
   height: 15px;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
 }
 
 .click-to-play-plugins-notification-button-container {
@@ -3095,7 +3095,7 @@ html|*#gcli-output-frame {
   text-shadow: none;
   background-image: linear-gradient(#B4211B, #8A1915);
   border-radius: 1px;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
 }
 
 /* Badge toolbar item */
@@ -3121,7 +3121,7 @@ html|*#gcli-output-frame {
 
 .toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]),
 .toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""])::after {
@@ -3175,19 +3175,19 @@ html|*#gcli-output-frame {
 
 .sidebar-splitter {
   border: 0;
-  -moz-border-end: 1px solid #C6C9CE;
+  border-inline-end: 1px solid #C6C9CE;
   min-width: 0;
   width: 3px;
    background-color: transparent;
-   -moz-margin-start: -3px;
+   margin-inline-start: -3px;
    position: relative;
 }
 
 #appcontent ~ .sidebar-splitter {
-   -moz-border-start: 1px solid #C6C9CE;
-   -moz-border-end: none;
-   -moz-margin-start: 0;
-   -moz-margin-end: -3px;
+   border-inline-start: 1px solid #C6C9CE;
+   border-inline-end: none;
+   margin-inline-start: 0;
+   margin-inline-end: -3px;
 }
 
   /* Toolbar shadow behind tabs */
@@ -3310,8 +3310,8 @@ html|*#gcli-output-frame {
 
 .tab-progress-container {
   margin-top: 7px !important;
-  -moz-margin-start: 16px !important;
-  -moz-margin-end: 0px !important;
+  margin-inline-start: 16px !important;
+  margin-inline-end: 0px !important;
   pointer-events: none !important;
   -moz-box-ordinal-group: 100 !important;
 }
@@ -3399,12 +3399,12 @@ window[tabsontop] .tabbrowser-tabs:not([highlightProtected]) > .tabbrowser-tab[p
 }
 
 #PinnedTabsBar .tab-content {
-  -moz-margin-end: -20px !important;
+  margin-inline-end: -20px !important;
 }
 
 .tabbrowser-tabs[showPhantom="true"][haspinned] #PinnedTabsBar,
 .tabbrowser-tabs[showPhantom="true"][haspinned] #PinnedTabsBarItems {
-  -moz-margin-end: -9px !important;
+  margin-inline-end: -9px !important;
 }
 
 /* dwhelper */
@@ -3531,12 +3531,12 @@ window[tabsontop] .tabbrowser-tabs:not([highlightProtected]) > .tabbrowser-tab[p
 }
 
 #addons-page[aios-appOS="WINNT"] #header-utils-btn > .toolbarbutton-menu-dropmarker {
-  -moz-margin-start: -2px !important;
-  -moz-margin-end: 4px !important;
+  margin-inline-start: -2px !important;
+  margin-inline-end: 4px !important;
 }
 
 #addons-page[aios-appOS="WINNT"] #view-port-container {
-  -moz-margin-start: -1px !important;
+  margin-inline-start: -1px !important;
   border-radius: 0px !important;
 }
 
@@ -3576,8 +3576,8 @@ toolbar[brighttext] #appmenu-toolbar-button > .toolbarbutton-icon {
   -moz-image-region: rect(0px, 18px, 18px, 0px) !important;
   margin: 0 !important;
   padding: 0 !important;
-  -moz-padding-start: 2px !important;
-  -moz-padding-end: 1px !important;
+  padding-inline-start: 2px !important;
+  padding-inline-end: 1px !important;
 }
 
 #appmenu-toolbar-button > label,
@@ -3608,7 +3608,7 @@ menupopup[sticky="true"] {
 
 /* Personal Titlebar */
 #main-window[sizemode=normal] #personal-titlebar {
-  -moz-margin-start: 42px !important;
+  margin-inline-start: 42px !important;
 }
 
 /* ColorZilla */
@@ -3651,7 +3651,7 @@ menupopup[sticky="true"] {
 #UIEnhancer_URLBar {
   margin-top: -2px !important;
   margin-bottom: -2px !important;
-  -moz-margin-start: 0 !important;
+  margin-inline-start: 0 !important;
 }
 
 #UIEnhancer_StatusBar {

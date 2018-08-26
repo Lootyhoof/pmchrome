@@ -21,8 +21,8 @@ button {
   margin: 2px 2px 3px 2px;
   min-width: 4em;
   min-height: 24px;
-  -moz-padding-start: 8px;
-  -moz-padding-end: 8px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
 }
 
 button:not([disabled="true"]):hover {
@@ -83,7 +83,7 @@ button[type="menu-button"] {
 }
 
 .button-menu-dropmarker {
-  -moz-margin-end: -10px;
+  margin-inline-end: -10px;
 }
 
 /* ::::: plain buttons ::::: */

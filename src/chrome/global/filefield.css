@@ -12,7 +12,7 @@ filefield {
 }
 
 .fileFieldContentBox {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   background-color: white;
   color: #444;
   border: 1px solid #bfbfbf;
@@ -30,8 +30,8 @@ filefield {
   height: 16px;
   margin-top: 1px;
   margin-bottom: 1px;
-  -moz-margin-start: 1px;
-  -moz-margin-end: 4px;
+  margin-inline-start: 1px;
+  margin-inline-end: 4px;
 }
 
 .fileFieldLabel {

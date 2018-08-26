@@ -43,8 +43,8 @@ wizardpage {
 }
 
 .wizard-button {
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 2px !important;
 }
 
 .wizard-buttons-separator {
@@ -105,7 +105,7 @@ description > .text-link:focus {
 }
 
 .inputColumn {
-  -moz-margin-end: 2px
+  margin-inline-end: 2px
 }
 
 .pin {

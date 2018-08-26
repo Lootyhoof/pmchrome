@@ -155,22 +155,22 @@
   } 
   
   #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) {
-    -moz-margin-start: 42px !important; 
+    margin-inline-start: 42px !important; 
     padding-bottom: 4px !important; 
   }
 
   #main-window[tabsontop="true"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
     margin-top: -4px !important;
     margin-bottom: -3px !important;
-    -moz-padding-start: 46px !important; 
-    -moz-padding-end: 145px !important; 
+    padding-inline-start: 46px !important; 
+    padding-inline-end: 145px !important; 
   }
   
   @media (-moz-os-version: windows-vista),
          (-moz-os-version: windows-win7),
          (-moz-os-version: windows-win8) {
     #main-window[tabsontop="true"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
-      -moz-padding-end: 110px !important;
+      padding-inline-end: 110px !important;
     }
   }
 }
@@ -202,15 +202,15 @@
 
 #appmenu-popup .menu-accel,
 #appmenu-popup .menu-iconic-accel {
-  -moz-margin-start: 1.7em !important;
-  -moz-margin-end: 2em !important;
+  margin-inline-start: 1.7em !important;
+  margin-inline-end: 2em !important;
 }
 
 @media not all and (-moz-windows-compositor) {
   #appmenu-popup .menu-accel,
   #appmenu-popup .menu-iconic-accel {
-    -moz-margin-start: 1.7em !important;
-    -moz-margin-end: 3em !important;
+    margin-inline-start: 1.7em !important;
+    margin-inline-end: 3em !important;
   }
 }
 
@@ -243,7 +243,7 @@
 #appmenuSecondaryPane {
   background-color: #F0F0F0;
   box-shadow: 1px 0 0 rgb(232, 232, 232) inset;
-  -moz-padding-start: 1px;
+  padding-inline-start: 1px;
   font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
 }
 
@@ -826,7 +826,7 @@
     content: "";
     display: block;
     margin-top: -32px !important;
-    -moz-margin-start: -2px;
+    margin-inline-start: -2px;
     padding: 0;
     width: 32px !important;
     height: 32px !important;
@@ -916,18 +916,18 @@
     }
     
     #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) {
-      -moz-margin-start: 42px !important; 
+      margin-inline-start: 42px !important; 
       padding-bottom: 4px !important; 
     }
 
     #main-window[tabsontop="true"][sizemode="maximized"] #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
-      -moz-padding-end: 3px !important; 
+      padding-inline-end: 3px !important; 
     }
 
     #main-window[tabsontop="true"][sizemode="normal"] #toolbar-menubar:not([autohide="false"]) ~ #TabsToolbar {
       margin-top: -4px !important;
-      -moz-padding-start: 46px !important; 
-      -moz-padding-end: 112px !important; 
+      padding-inline-start: 46px !important; 
+      padding-inline-end: 112px !important; 
     }
   
     #main-menubar {

@@ -41,7 +41,7 @@
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
   padding: 0px!important;
   padding-bottom: 1px!important;
-  -moz-padding-start: 1px!important;
+  padding-inline-start: 1px!important;
   margin-bottom: 0px!important; 
   background: transparent!important;
   background-clip: padding-box!important;
@@ -198,9 +198,9 @@
 }
 
 .category {
-  -moz-margin-start: 0px;
-  -moz-margin-end: 0px;
-  -moz-border-start: 6px solid transparent;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  border-inline-start: 6px solid transparent;
   color: #999999;
   min-height: 17px;
   padding: 2px 0 3px 12px;
@@ -235,7 +235,7 @@
 }
 
 .category[selected] {
-  -moz-border-start-color: rgb(78, 87, 100);
+  border-inline-start-color: rgb(78, 87, 100);
   color: rgb(70, 78, 90);
 }
 
@@ -255,7 +255,7 @@
 .category-icon {
   width: 32px;
   height: 32px;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   display: none;
 }
 
@@ -299,8 +299,8 @@
   padding: 0px;
   margin: 0px; 
   min-height: 52px;
-  -moz-padding-start: 23px;
-  -moz-padding-end: 23px;
+  padding-inline-start: 23px;
+  padding-inline-end: 23px;
 }
 
 #header-search {
@@ -319,7 +319,7 @@
 
 #header-utils-btn {
   list-style-image: url("chrome://mozapps/skin/extensions/utilities2.png");
-  -moz-margin-end: 8px;
+  margin-inline-end: 8px;
 }
 
 #header-utils-btn .toolbarbutton-icon {
@@ -385,8 +385,8 @@
 }
 
 .sorter .button-icon {
-  -moz-margin-start: -3px;
-  -moz-margin-end: 3px;
+  margin-inline-start: -3px;
+  margin-inline-end: 3px;
 }
 
 /*** discover view ***/
@@ -403,7 +403,7 @@
 
 .discover-logo {
   list-style-image: url("chrome://mozapps/skin/extensions/discover-logo.png");
-  -moz-margin-end: 15px;
+  margin-inline-end: 15px;
 }
 
 .discover-title {
@@ -432,7 +432,7 @@
 }
 
 .addon {
-  -moz-padding-end: 5px;
+  padding-inline-end: 5px;
   color: rgb(151, 156, 160);
   font-size: 13px;
   margin: 0;
@@ -443,7 +443,7 @@
   cursor: pointer;
   margin: 0;
   padding: 0;
-  -moz-margin-start: 0.5em;
+  margin-inline-start: 0.5em;
 }
 
 .icon-container {
@@ -458,7 +458,7 @@
   width: auto;
   height: auto;
   margin: 3px 0px;
-  -moz-margin-end: 20px;
+  margin-inline-end: 20px;
 }
 
 .icon {
@@ -487,7 +487,7 @@
 .name-container {
   margin-top: -1px;
   margin-bottom: 0;
-  -moz-margin-start: -6px;
+  margin-inline-start: -6px;
   -moz-box-align: end;
   -moz-box-flex: 1;
   color: rgb(48, 57, 66);
@@ -496,7 +496,7 @@
 .name-container > .name {
   font-size: 14px;
   font-weight: 500;
-  -moz-padding-end: 20px;
+  padding-inline-end: 20px;
 }
 
 .name-container > .version,
@@ -524,7 +524,7 @@
 .warning,
 .pending,
 .error {
-  -moz-margin-start: 41px;
+  margin-inline-start: 41px;
   -moz-box-align: center;
 }
 
@@ -534,7 +534,7 @@ richlistitem[pending="uninstall"] {
 }
 
 richlistitem[pending="uninstall"] .pending {
-  -moz-margin-start: 39px;
+  margin-inline-start: 39px;
 }
 
 .content-container,
@@ -594,7 +594,7 @@ richlistitem[pending="uninstall"] .pending {
 
 .addon .relnotes-container {
   -moz-box-align: start;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   height: 0;
   overflow: hidden;
   opacity: 0;
@@ -624,7 +624,7 @@ richlistitem[pending="uninstall"] .pending {
 }
 
 .addon .relnotes-toggle > .button-box > .button-icon {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 .addon-view:not([active="false"]):not([selected])[notification="warning"] {
@@ -722,11 +722,11 @@ richlistitem[pending="uninstall"] .pending {
 #detail-notifications .warning,
 #detail-notifications .pending,
 #detail-notifications .error {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #detail-icon {
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
   margin-top: 6px;
   max-width: 64px;
   max-height: 64px;
@@ -745,7 +745,7 @@ richlistitem[pending="uninstall"] .pending {
 }
 
 #detail-screenshot {
-  -moz-margin-end: 2em;
+  margin-inline-end: 2em;
   max-width: 300px;
   max-height: 300px;
 }
@@ -768,7 +768,7 @@ richlistitem[pending="uninstall"] .pending {
 }
 
 #detail-desc, #detail-fulldesc {
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   /* This is necessary to fix layout issues with multi-line descriptions, see
      bug 592712*/
   outline: solid transparent;
@@ -817,7 +817,7 @@ richlistitem[pending="uninstall"] .pending {
 }
 
 #detail-contrib-btn .button-icon {
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
 }
 
 #detail-contrib-btn:not(:active):hover {
@@ -881,7 +881,7 @@ setting {
   font-size: 90.9%;
   color: graytext;
   margin-top: -2px;
-  -moz-margin-start: 2em;
+  margin-inline-start: 2em;
   white-space: pre-wrap;
 }
 
@@ -900,8 +900,8 @@ menulist { /* Fixes some styling inconsistencies */
 /*** creator ***/
 
 .creator > label {
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .creator > .text-link {
@@ -912,7 +912,7 @@ menulist { /* Fixes some styling inconsistencies */
 /*** rating ***/
 
 .meta-rating {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   padding-top: 2px;
 }
 
@@ -938,7 +938,7 @@ menulist { /* Fixes some styling inconsistencies */
   border-radius: 3px!important;
   height: 6px!important;
   min-height: 6px!important;
-  -moz-margin-end: 35px !important;
+  margin-inline-end: 35px !important;
   width: 190px!important;
 }
 
@@ -971,7 +971,7 @@ menulist { /* Fixes some styling inconsistencies */
 .download-progress .cancel {
   -moz-appearance: none;
   margin-top: -6px !important;
-  -moz-margin-end: -25px !important;
+  margin-inline-end: -25px !important;
   padding: 0 !important;
   box-shadow: none;
   min-height: 16px;
@@ -999,7 +999,7 @@ menulist { /* Fixes some styling inconsistencies */
 }
 
 .download-progress .cancel .button-icon {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 .download-progress .status-container {
@@ -1051,7 +1051,7 @@ button.button-link {
   cursor: pointer;
   min-width: 0;
   margin: 0;
-  -moz-margin-end: 0.5em;
+  margin-inline-end: 0.5em;
 }
 
 .text-link {
