@@ -1499,6 +1499,7 @@ window[sizemode="maximized"] #navigator-toolbox {
 
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > .tab-content,
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-icon-image,
+.tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-icon-overlay,
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > * > .tab-text,
 .tabs-newtab-button:-moz-lwtheme-brighttext {
   filter: invert(1);
@@ -1665,7 +1666,8 @@ window[sizemode="maximized"] #navigator-toolbox {
 .tab-icon-sound:-moz-lwtheme-brighttext[soundplaying],
 .tab-icon-sound:-moz-lwtheme-brighttext[muted],
 .tab-icon-sound:-moz-lwtheme-brighttext[blocked] {
-  filter: url(chrome://browser/skin/filters.svg#fill) drop-shadow(1px 1px 1px black);
+  /* Inverted here to workaround inverting tab contents for lwthemes... */
+  filter: url(chrome://browser/skin/filters.svg#fill) invert(1) drop-shadow(1px 1px 1px white);
 }
 
 .tab-icon-sound[soundplaying]:not(:hover),
