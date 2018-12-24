@@ -9,7 +9,7 @@
   
   <Description about="urn:mozilla:install-manifest">
     <em:id>{87a59598-d2b6-45ba-b98e-98e62085837f}</em:id>
-    <em:version>4.3.0</em:version>
+    <em:version>4.4.0</em:version>
     <em:name>PMChrome</em:name>
     <em:description>Chrome like theme for Pale Moon. Fork of "FXChrome" by dkgo</em:description>
     <em:creator>Lootyhoof</em:creator>
