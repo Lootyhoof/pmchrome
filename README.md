@@ -1,5 +1,5 @@
 # PMChrome
-![Preview](http://i63.tinypic.com/o8c7fc.png)
+![Preview](https://i.imgur.com/ETZgEat.png)
 
 Fork of the theme "FXChrome" by dkgo for Pale Moon.
 
