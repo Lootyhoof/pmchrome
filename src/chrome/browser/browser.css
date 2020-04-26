@@ -874,16 +874,30 @@ toolbar[brighttext] .toolbarbutton-menubutton-dropmarker {
 /* ::::: fullscreen window controls ::::: */
 
 #window-controls {
-  margin: -1px -1px 0 6px;
+  -moz-box-align: start;
+  /* Make sure the window controls are always last on the toolbar */
+  -moz-box-ordinal-group: 100;
+  margin-inline-start: 6px;
+  margin-inline-end: -2px;
+  margin-top: -1px;
 }
 
-#window-controls:-moz-locale-dir(rtl) {
-  margin: -1px 6px 0 -1px;
+#main-window[tabsontop=false] #window-controls {
+  margin-inline-end: -5px;
+  margin-top: -2px;
+}
+
+#main-window[tabsontop=false] #window-controls > toolbarbutton {
+  filter: contrast(0%) brightness(0%);
 }
 
 #minimize-button,
 #restore-button,
 #close-button {
+  -moz-appearance: none;
+  border-style: none;
+  margin: 0;
+  border-image: none;
   list-style-image: url("chrome://global/skin/icons/windowControls.png");
   padding: 0;
 }
@@ -891,20 +905,43 @@ toolbar[brighttext] .toolbarbutton-menubutton-dropmarker {
 #minimize-button {
   -moz-image-region: rect(0, 38px, 27px, 0);
 }
+
 #minimize-button:hover {
   -moz-image-region: rect(27px, 38px, 54px, 0);
 }
+
 #minimize-button:hover:active {
   -moz-image-region: rect(54px, 38px, 81px, 0);
 }
+
 #restore-button {
   -moz-image-region: rect(0, 74px, 27px, 38px);
 }
+
 #restore-button:hover {
   -moz-image-region: rect(27px, 74px, 54px, 38px);
 }
+
 #restore-button:hover:active {
   -moz-image-region: rect(54px, 74px, 81px, 38px);
+}
+
+#close-button {
+  -moz-image-region: rect(0, 112px, 27px, 74px);
+}
+
+#close-button:hover {
+  -moz-image-region: rect(27px, 112px, 54px, 74px);
+}
+
+#close-button:hover:active {
+  -moz-image-region: rect(54px, 112px, 81px, 74px);
+}
+
+#minimize-button:-moz-locale-dir(rtl),
+#restore-button:-moz-locale-dir(rtl),
+#close-button:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
 }
 
 /* ::::: Location Bar ::::: */
@@ -2812,37 +2849,6 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
 
 .tabbrowser-tab:not(:-moz-lwtheme) {
   text-shadow: none;
-}
-
-/* ::::: fullscreen window controls ::::: */
-
-#window-controls {
-  -moz-box-align: start;
-}
-
-#minimize-button,
-#restore-button,
-#close-button {
-  -moz-appearance: none;
-  border-style: none;
-  margin: 0 !important;
-  border-image: none !important;
-}
-
-#close-button {
-  -moz-image-region: rect(0, 112px, 27px, 74px);
-}
-#close-button:hover {
-  -moz-image-region: rect(27px, 112px, 54px, 74px);
-}
-#close-button:hover:active {
-  -moz-image-region: rect(54px, 112px, 81px, 74px);
-}
-
-#minimize-button:-moz-locale-dir(rtl),
-#restore-button:-moz-locale-dir(rtl),
-#close-button:-moz-locale-dir(rtl) {
-  transform: scaleX(-1);
 }
 
 /* TMP */
