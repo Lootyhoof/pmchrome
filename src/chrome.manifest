@@ -1,9 +1,9 @@
-skin browser      PMChrome chrome/browser/  
-skin communicator      PMChrome chrome/communicator/  
-skin mozapps      PMChrome chrome/mozapps/   
-skin global      PMChrome chrome/global/  
+skin browser      PMChrome chrome/browser/
+skin communicator      PMChrome chrome/communicator/
+skin mozapps      PMChrome chrome/mozapps/
+skin global      PMChrome chrome/global/
+skin os          PMChrome chrome/os/linux/
 skin os          PMChrome chrome/os/winnt/ os=WINNT
-skin os          PMChrome chrome/os/linux/ os=Linux
 skin os          PMChrome chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
