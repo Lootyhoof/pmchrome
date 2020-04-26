@@ -1,3 +1,7 @@
+:root {
+  --field-color: #ffffff;
+}
+
 #toolbar-menubar:not(:-moz-lwtheme) {
   -moz-appearance: menubar !important;
 }
@@ -5,6 +9,13 @@
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   -moz-appearance: menubar;
   color: -moz-menubartext;
+}
+
+#nav-bar:not(:-moz-lwtheme) textbox,
+#PersonalToolbar:not(:-moz-lwtheme) textbox,
+#TabsToolbar[tabsontop=false]:not(:-moz-lwtheme) textbox {
+  background-color: var(--field-color);
+  color: var(--toolbarbutton-color);
 }
 
 /* Private browsing indicator */
