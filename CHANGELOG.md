@@ -1,5 +1,12 @@
 # Changelog
 
+### 4.6.0
+- improve integration with macOS
+- support other GTK-based operating systems
+- provide platform-specific custom statusbar styling to ensure it works in all platforms
+- Windows/Linux: improve fullscreen styling
+- Linux: improve appearance on dark system themes
+
 ### 4.5.1
 - small version bump for Pale Moon 29.0 compatibility (no code changes)
 
