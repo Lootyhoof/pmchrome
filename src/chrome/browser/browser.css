@@ -1075,8 +1075,15 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background: transparent
-              linear-gradient(rgba(233,245,223,.6), rgba(195,233,195,.6), rgba(161,218,255,.6));
+              linear-gradient(rgba(223, 245, 244, 0.6), rgba(195, 221, 233, 0.6), rgba(161,218,255,.6));
   border-color: rgba(106,167,174,.84);
+  box-shadow: 0 1px 1px 0 rgba(251,254,251,.9) inset;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
+  background: transparent
+              linear-gradient(rgba(245, 245, 223, 0.6), rgba(233, 229, 195, 0.6), rgba(255, 241, 161, 0.6));
+  border-color: rgba(174, 167, 106, 0.84);
   box-shadow: 0 1px 1px 0 rgba(251,254,251,.9) inset;
 }
 
@@ -1090,6 +1097,12 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   margin-inline-start: 4px;
   margin-inline-end: 1px;
   color: #0568C4;
+}
+
+#identity-box.mixedContent #identity-icon-labels {
+  margin-inline-start: 4px;
+  margin-inline-end: 1px;
+  color: #c49805;
 }
 
 #identity-box:-moz-focusring {
