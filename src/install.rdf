@@ -9,14 +9,13 @@
   
   <Description about="urn:mozilla:install-manifest">
     <em:id>{87a59598-d2b6-45ba-b98e-98e62085837f}</em:id>
-    <em:version>4.7.0</em:version>
+    <em:version>4.8.0</em:version>
     <em:name>PMChrome</em:name>
     <em:description>Chrome like theme for Pale Moon. Fork of "FXChrome" by dkgo</em:description>
     <em:creator>Lootyhoof</em:creator>
     <em:type>4</em:type>
     <em:internalName>PMChrome</em:internalName>
     <em:skinnable>true</em:skinnable>
-    <em:updateURL>https://raw.githubusercontent.com/Lootyhoof/pmchrome/master/update.xml</em:updateURL>
 	
     <em:contributor>dkgo</em:contributor>
     <em:contributor>Chrome</em:contributor>
